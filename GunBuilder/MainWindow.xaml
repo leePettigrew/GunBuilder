@@ -174,7 +174,7 @@
                                         <ListBoxItem Content=".44 Magnum"/>
                                         <ListBoxItem Content=".50 Action Express"/>
                                         <ListBoxItem Content=".500 Linebaugh"/>
-                                        <ListBoxItem Content="Improvised Ammo"/>
+                                        <ListBoxItem Content="Musket Balls"/>
                                     </ListBox>
                                 </Grid>
 

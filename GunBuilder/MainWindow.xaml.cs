@@ -135,22 +135,22 @@ namespace GunBuilder
                 // Pistol Calibers
                 // You can change all of these or add more as needed.
                 //       Name                 Type      Price  Weight  Damage  Hide  AC  Note
-                new Ammo("9x19mm Parabellum", "Pistol", 50, 2.0, 5, 0, 0, "Standard pistol ammunition."),
+                new Ammo("9x19mm Parabellum", "Pistol", 50, 2.0, 6, 0, 0, "Standard pistol ammunition."),
                 new Ammo(".45 ACP", "Pistol", 70, 1.2, 6, 0, 0, "Higher stopping power."),
-                new Ammo(".40 S&W", "Pistol", 65, 1.1, 5, 0, 0, "Balanced performance."),
+                new Ammo(".40 S&W", "Pistol", 65, 1.1, 6, 0, 0, "Balanced performance."),
                 new Ammo(".380 ACP", "Pistol", 40, 0.8, 4, 0, 0, "Compact pistol ammo."),
-                new Ammo(".357 Magnum", "Pistol", 90, 1.5, 7, 0, 0, "High-velocity rounds."),
-                new Ammo(".38 Special", "Pistol", 60, 1.0, 5, 0, 0, "Reliable and accurate."),
-                new Ammo(".22 LR", "Pistol", 30, 0.5, 3, 0, 0, "Low recoil and cost."),
+                new Ammo(".357 Magnum", "Pistol", 90, 1.5, 6, 0, 0, "High-velocity rounds."),
+                new Ammo(".38 Special", "Pistol", 60, 1.0, 4, 0, 0, "Reliable and accurate."),
+                new Ammo(".22 LR", "Pistol", 30, 0.5, 4, 0, 0, "Low recoil and cost."),
                 new Ammo(".44 Magnum", "Pistol", 110, 1.8, 8, 0, 0, "Maximum power for pistols."),
-                new Ammo(".50 Action Express", "Pistol", 130, 2.0, 9, 0, 0, "Extreme stopping power."),
+                new Ammo(".50 Action Express", "Pistol", 130, 2.0, 8, 0, 0, "Extreme stopping power."),
                 new Ammo(".500 Linebaugh", "Pistol", 150, 2.2, 10, 0, 0, "Custom heavy-duty rounds."),
-                new Ammo("Improvised Ammo", "Pistol", 20, 0.4, 2, 0, 0, "Homemade ammunition."),
+                new Ammo("Musket Balls", "Pistol", 20, 0.4, 4, 0, 0, "Homemade ammunition."),
 
                 // Rifle Calibers
                 //       Name                 Type      Price  Weight  Damage  Hide  AC  Note
                 new Ammo("5.56x45mm NATO", "Rifle", 80, 2.0, 6, 0, 0, "Standard rifle ammunition."),
-                new Ammo("7.62x39mm", "Rifle", 90, 2.5, 7, 0, 0, "Popular intermediate cartridge."),
+                new Ammo("7.62x39mm", "Rifle", 90, 2.5, 8, 0, 0, "Popular intermediate cartridge."),
                 new Ammo("7.62x51mm NATO (.308 Winchester)", "Rifle", 100, 3.0, 8, 0, 0, "High-precision rounds."),
                 new Ammo(".223 Remington", "Rifle", 85, 2.1, 6, 0, 0, "Versatile and accurate."),
                 new Ammo(".30-06 Springfield", "Rifle", 120, 3.5, 9, 0, 0, "Classic hunting cartridge."),
@@ -908,12 +908,12 @@ namespace GunBuilder
                     combinedNotes.AppendLine($"Rifling: {rifling}");
                     if (rifling == "Rifled")
                     {
-                        totalDamageMod += 2;
+                        totalDamageMod += 0;
                         combinedNotes.AppendLine("Rifled barrels increase accuracy and damage.");
                     }
                     else
                     {
-                        totalDamageMod -= 0;
+                        totalDamageMod += 0;
                         combinedNotes.AppendLine("Smooth bore barrels decrease accuracy and damage.");
                     }
                 }
@@ -1017,7 +1017,7 @@ namespace GunBuilder
                 int damageDice = totalDamageMod;
 
                 // Get Ammo Damage per Die
-                int ammoDamagePerDie = SelectedShotgunShell != null ? SelectedShotgunShell.DamageMod : 0;
+                int ammoDamagePerDie = SelectedAmmo != null ? SelectedAmmo.DamageMod : 0;
 
 
 
