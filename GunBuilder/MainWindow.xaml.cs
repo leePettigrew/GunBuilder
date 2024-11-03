@@ -133,7 +133,7 @@ namespace GunBuilder
             AmmoList = new List<Ammo>
             {
                 // Pistol Calibers
-                new Ammo("9x19mm Parabellum", "Pistol", 50, 1.0, 5, 0, 0, "Standard pistol ammunition."),
+                new Ammo("9x19mm Parabellum", "Pistol", 50, 2.0, 5, 0, 0, "Standard pistol ammunition."),
                 new Ammo(".45 ACP", "Pistol", 70, 1.2, 6, 0, 0, "Higher stopping power."),
                 new Ammo(".40 S&W", "Pistol", 65, 1.1, 5, 0, 0, "Balanced performance."),
                 new Ammo(".380 ACP", "Pistol", 40, 0.8, 4, 0, 0, "Compact pistol ammo."),
