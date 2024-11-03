@@ -133,6 +133,8 @@ namespace GunBuilder
             AmmoList = new List<Ammo>
             {
                 // Pistol Calibers
+                // You can change all of these or add more as needed.
+                //       Name                 Type      Price  Weight  Damage  Hide  AC  Note
                 new Ammo("9x19mm Parabellum", "Pistol", 50, 2.0, 5, 0, 0, "Standard pistol ammunition."),
                 new Ammo(".45 ACP", "Pistol", 70, 1.2, 6, 0, 0, "Higher stopping power."),
                 new Ammo(".40 S&W", "Pistol", 65, 1.1, 5, 0, 0, "Balanced performance."),
@@ -146,6 +148,7 @@ namespace GunBuilder
                 new Ammo("Improvised Ammo", "Pistol", 20, 0.4, 2, 0, 0, "Homemade ammunition."),
 
                 // Rifle Calibers
+                //       Name                 Type      Price  Weight  Damage  Hide  AC  Note
                 new Ammo("5.56x45mm NATO", "Rifle", 80, 2.0, 6, 0, 0, "Standard rifle ammunition."),
                 new Ammo("7.62x39mm", "Rifle", 90, 2.5, 7, 0, 0, "Popular intermediate cartridge."),
                 new Ammo("7.62x51mm NATO (.308 Winchester)", "Rifle", 100, 3.0, 8, 0, 0, "High-precision rounds."),
@@ -170,6 +173,7 @@ namespace GunBuilder
         {
             ShotgunShellList = new List<ShotgunShell>
             {
+                //               Name        Gauge  Price  Weight  Damage  Hide  AC  Note
                 new ShotgunShell("Birdshot", "10", 30, 1.0, 4, 0, 0, "Small pellets for hunting birds."),
                 new ShotgunShell("Birdshot", "12", 35, 1.1, 5, 0, 0, "Standard bird hunting rounds."),
                 new ShotgunShell("Birdshot", "16", 40, 1.2, 6, 0, 0, "Smaller pellets for tighter patterns."),
@@ -221,6 +225,7 @@ namespace GunBuilder
         {
             BarrelTypeList = new List<BarrelType>
             {
+                //              Name     PriceMod  WeightMod  DamageMod  HideMod  ACMod  Note
                 new BarrelType("Normal", 0, 0, 0, 0, 0, "Standard barrel with no modifications."),
                 new BarrelType("Heavy Barrel", 0.10, 0.02, 0, 0, 0, "Increases durability and heat dissipation."),
                 new BarrelType("Fluted", 0.15, 0.015, 0, 0, 0, "Reduces weight while maintaining strength."),
@@ -236,11 +241,13 @@ namespace GunBuilder
         {
             StockList = new List<Stock>
             {
+                //              Name     PriceMod  WeightMod  DamageMod  HideMod  ACMod  Note
                 new Stock("Standard", 0, 0, 0, 0, 0, "Standard stock with no modifications."),
                 new Stock("Wireframe", 0.05, -0.005, 0, 0, 0, "Reduces weight with a wireframe design."),
                 new Stock("Thumbhole", 0.075, 0.002, 0, 0, 0, "Improves handling and control."),
                 new Stock("Skeleton", 0.10, -0.007, 0, 0, 0, "Significantly reduces weight with a skeletal structure."),
-                new Stock("Collapsible", 0.125, 0.003, 0, 0, 0, "Allows for compact storage and adjustable length.")
+                new Stock("Collapsible", 0.125, 0.003, 0, 0, 0, "Allows for compact storage and adjustable length."),
+                new Stock("Pistol Grip", 0.15, 0.005, 0, 0, 0, "Improves handling and control.")
             };
         }
 
@@ -271,6 +278,7 @@ namespace GunBuilder
         {
             FrameList = new List<WeaponFrame>
             {
+                //              Name     BaseWeightKg  BasePriceCorium
                 new WeaponFrame("Pistol", 1.0, 50.0),       // BasePriceCorium = 50 Corium
                 new WeaponFrame("Carbine", 2.5, 150.0),
                 new WeaponFrame("Rifle", 3.5, 200.0),

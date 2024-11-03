@@ -358,6 +358,7 @@
                                 <ComboBoxItem Content="Thumbhole"/>
                                 <ComboBoxItem Content="Skeleton"/>
                                 <ComboBoxItem Content="Collapsible"/>
+                                <ComboBoxItem Content="Pistol Grip"/>
                             </ComboBox>
                         </Grid>
 
