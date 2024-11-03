@@ -134,35 +134,35 @@ namespace GunBuilder
             {
                 // Pistol Calibers
                 // You can change all of these or add more as needed.
-                //       Name                 Type      Price  Weight  Damage  Hide  AC  Note
-                new Ammo("9x19mm Parabellum", "Pistol", 50, 2.0, 5, 0, 0, "Standard pistol ammunition."),
-                new Ammo(".45 ACP", "Pistol", 70, 1.2, 6, 0, 0, "Higher stopping power."),
-                new Ammo(".40 S&W", "Pistol", 65, 1.1, 5, 0, 0, "Balanced performance."),
-                new Ammo(".380 ACP", "Pistol", 40, 0.8, 4, 0, 0, "Compact pistol ammo."),
-                new Ammo(".357 Magnum", "Pistol", 90, 1.5, 7, 0, 0, "High-velocity rounds."),
-                new Ammo(".38 Special", "Pistol", 60, 1.0, 5, 0, 0, "Reliable and accurate."),
-                new Ammo(".22 LR", "Pistol", 30, 0.5, 3, 0, 0, "Low recoil and cost."),
-                new Ammo(".44 Magnum", "Pistol", 110, 1.8, 8, 0, 0, "Maximum power for pistols."),
-                new Ammo(".50 Action Express", "Pistol", 130, 2.0, 9, 0, 0, "Extreme stopping power."),
-                new Ammo(".500 Linebaugh", "Pistol", 150, 2.2, 10, 0, 0, "Custom heavy-duty rounds."),
-                new Ammo("Improvised Ammo", "Pistol", 20, 0.4, 2, 0, 0, "Homemade ammunition."),
+                //       Name                 Type      Price  Weight  Damage  Hide  AC roundsize  Note
+                new Ammo("9x19mm Parabellum", "Pistol", 50, 2.0, 5, 0, 0,0.0, "Standard pistol ammunition."),
+                new Ammo(".45 ACP", "Pistol", 70, 1.2, 6, 0, 0,0.0, "Higher stopping power."),
+                new Ammo(".40 S&W", "Pistol", 65, 1.1, 5, 0, 0,0.0, "Balanced performance."),
+                new Ammo(".380 ACP", "Pistol", 40, 0.8, 4, 0, 0,0.0, "Compact pistol ammo."),
+                new Ammo(".357 Magnum", "Pistol", 90, 1.5, 7, 0, 0,0.0, "High-velocity rounds."),
+                new Ammo(".38 Special", "Pistol", 60, 1.0, 5, 0, 0,0.0, "Reliable and accurate."),
+                new Ammo(".22 LR", "Pistol", 30, 0.5, 3, 0, 0,0.0, "Low recoil and cost."),
+                new Ammo(".44 Magnum", "Pistol", 110, 1.8, 8, 0, 0,0.0, "Maximum power for pistols."),
+                new Ammo(".50 Action Express", "Pistol", 130, 2.0, 9, 0, 0,0.0, "Extreme stopping power."),
+                new Ammo(".500 Linebaugh", "Pistol", 150, 2.2, 10, 0, 0,0.0, "Custom heavy-duty rounds."),
+                new Ammo("Improvised Ammo", "Pistol", 20, 0.4, 2, 0, 0,0.0, "Homemade ammunition."),
 
                 // Rifle Calibers
-                //       Name                 Type      Price  Weight  Damage  Hide  AC  Note
-                new Ammo("5.56x45mm NATO", "Rifle", 80, 2.0, 6, 0, 0, "Standard rifle ammunition."),
-                new Ammo("7.62x39mm", "Rifle", 90, 2.5, 7, 0, 0, "Popular intermediate cartridge."),
-                new Ammo("7.62x51mm NATO (.308 Winchester)", "Rifle", 100, 3.0, 8, 0, 0, "High-precision rounds."),
-                new Ammo(".223 Remington", "Rifle", 85, 2.1, 6, 0, 0, "Versatile and accurate."),
-                new Ammo(".30-06 Springfield", "Rifle", 120, 3.5, 9, 0, 0, "Classic hunting cartridge."),
-                new Ammo(".300 Winchester Magnum", "Rifle", 130, 3.8, 10, 0, 0, "Long-range precision."),
-                new Ammo(".30-30 Winchester", "Rifle", 95, 2.8, 7, 0, 0, "Reliable for hunting."),
-                new Ammo(".45-70 Government", "Rifle", 140, 4.0, 11, 0, 0, "Powerful large-caliber."),
-                new Ammo("6.5mm Creedmoor", "Rifle", 110, 2.9, 8, 0, 0, "Popular for competition shooting."),
-                new Ammo(".50 BMG", "Rifle", 200, 5.0, 15, 0, 0, "Massive long-range rounds."),
-                new Ammo("7.62x54mm", "Rifle", 115, 3.2, 9, 0, 0, "Military standard ammunition."),
-                new Ammo(".338 Magnum", "Rifle", 125, 3.5, 10, 0, 0, "High-performance hunting rounds."),
-                new Ammo("4.73x33mm Caseless", "Rifle", 160, 4.5, 12, 0, 0, "Advanced caseless technology."),
-                new Ammo("14.5x114mm", "Rifle", 300, 6.0, 20, 0, 0, "Heavy anti-materiel rounds.")
+                //       Name                 Type      Price  Weight  Damage  Hide  AC roundsize  Note
+                new Ammo("5.56x45mm NATO", "Rifle", 80, 2.0, 6, 0, 0,0.377, "Standard rifle ammunition."),
+                new Ammo("7.62x39mm", "Rifle", 90, 2.5, 8, 0, 0,0.415, "Popular intermediate cartridge."),
+                new Ammo("7.62x51mm NATO (.308 Winchester)", "Rifle", 100, 3.0, 8, 0, 0,0.0, "High-precision rounds."),
+                new Ammo(".223 Remington", "Rifle", 85, 2.1, 6, 0, 0,0.0, "Versatile and accurate."),
+                new Ammo(".30-06 Springfield", "Rifle", 120, 3.5, 9, 0, 0,0.0, "Classic hunting cartridge."),
+                new Ammo(".300 Winchester Magnum", "Rifle", 130, 3.8, 10, 0, 0,0.0, "Long-range precision."),
+                new Ammo(".30-30 Winchester", "Rifle", 95, 2.8, 7, 0, 0,0.0, "Reliable for hunting."),
+                new Ammo(".45-70 Government", "Rifle", 140, 4.0, 11, 0, 0,0.0, "Powerful large-caliber."),
+                new Ammo("6.5mm Creedmoor", "Rifle", 110, 2.9, 8, 0, 0,0.0, "Popular for competition shooting."),
+                new Ammo(".50 BMG", "Rifle", 200, 5.0, 15, 0, 0,0.0, "Massive long-range rounds."),
+                new Ammo("7.62x54mm", "Rifle", 115, 3.2, 9, 0, 0,0.0, "Military standard ammunition."),
+                new Ammo(".338 Magnum", "Rifle", 125, 3.5, 10, 0, 0,0.0, "High-performance hunting rounds."),
+                new Ammo("4.73x33mm Caseless", "Rifle", 160, 4.5, 12, 0, 0,0.0, "Advanced caseless technology."),
+                new Ammo("14.5x114mm", "Rifle", 300, 6.0, 20, 0, 0,0.0, "Heavy anti-materiel rounds.")
             };
         }
 
@@ -173,48 +173,48 @@ namespace GunBuilder
         {
             ShotgunShellList = new List<ShotgunShell>
             {
-                //               Name        Gauge  Price  Weight  Damage  Hide  AC  Note
-                new ShotgunShell("Birdshot", "10", 30, 1.0, 4, 0, 0, "Small pellets for hunting birds."),
-                new ShotgunShell("Birdshot", "12", 35, 1.1, 5, 0, 0, "Standard bird hunting rounds."),
-                new ShotgunShell("Birdshot", "16", 40, 1.2, 6, 0, 0, "Smaller pellets for tighter patterns."),
-                new ShotgunShell("Birdshot", "20", 45, 1.3, 7, 0, 0, "Very small pellets for precision."),
-                new ShotgunShell("Birdshot", "28", 50, 1.4, 8, 0, 0, "Extra small pellets for minimal damage."),
-                new ShotgunShell("Birdshot", ".410", 55, 1.5, 9, 0, 0, "Small caliber birdshot."),
+                //               Name        Gauge  Price  Weight  Damage  Hide  AC DamageDiceMod Note
+                new ShotgunShell("Birdshot", "10", 30, 1.0, 4, 0, 0,3, "Small pellets for hunting birds."),
+                new ShotgunShell("Birdshot", "12", 35, 1.1, 5, 0, 0,2, "Standard bird hunting rounds."),
+                new ShotgunShell("Birdshot", "16", 40, 1.2, 6, 0, 0,1, "Smaller pellets for tighter patterns."),
+                new ShotgunShell("Birdshot", "20", 45, 1.3, 7, 0, 0,1, "Very small pellets for precision."),
+                new ShotgunShell("Birdshot", "28", 50, 1.4, 8, 0, 0,1, "Extra small pellets for minimal damage."),
+                new ShotgunShell("Birdshot", ".410", 55, 1.5, 9, 0, 0,0, "Small caliber birdshot."),
 
-                new ShotgunShell("Buckshot", "10", 60, 2.0, 10, 0, 0, "Large pellets for big game."),
-                new ShotgunShell("Buckshot", "12", 65, 2.1, 11, 0, 0, "Standard buckshot rounds."),
-                new ShotgunShell("Buckshot", "16", 70, 2.2, 12, 0, 0, "Mid-sized pellets for balanced performance."),
-                new ShotgunShell("Buckshot", "20", 75, 2.3, 13, 0, 0, "Smaller pellets for tighter spread."),
-                new ShotgunShell("Buckshot", "28", 80, 2.4, 14, 0, 0, "Extra small buckshot for controlled damage."),
-                new ShotgunShell("Buckshot", ".410", 85, 2.5, 15, 0, 0, "Small caliber buckshot."),
+                new ShotgunShell("Buckshot", "10", 60, 2.0, 10, 0, 0,3, "Large pellets for big game."),
+                new ShotgunShell("Buckshot", "12", 65, 2.1, 11, 0, 0,2, "Standard buckshot rounds."),
+                new ShotgunShell("Buckshot", "16", 70, 2.2, 12, 0, 0,1, "Mid-sized pellets for balanced performance."),
+                new ShotgunShell("Buckshot", "20", 75, 2.3, 13, 0, 0,1, "Smaller pellets for tighter spread."),
+                new ShotgunShell("Buckshot", "28", 80, 2.4, 14, 0, 0,1, "Extra small buckshot for controlled damage."),
+                new ShotgunShell("Buckshot", ".410", 85, 2.5, 15, 0, 0,0, "Small caliber buckshot."),
 
-                new ShotgunShell("Dragonsbreath", "10", 100, 3.0, 20, 0, 0, "Incendiary rounds that ignite targets."),
-                new ShotgunShell("Dragonsbreath", "12", 105, 3.1, 21, 0, 0, "Burns targets for additional damage."),
-                new ShotgunShell("Dragonsbreath", "16", 110, 3.2, 22, 0, 0, "Enhanced incendiary effects."),
-                new ShotgunShell("Dragonsbreath", "20", 115, 3.3, 23, 0, 0, "Targets burn for 1d4 rounds."),
-                new ShotgunShell("Dragonsbreath", "28", 120, 3.4, 24, 0, 0, "Smaller incendiary pellets."),
-                new ShotgunShell("Dragonsbreath", ".410", 125, 3.5, 25, 0, 0, "High-efficiency incendiary rounds."),
+                new ShotgunShell("Dragonsbreath", "10", 100, 3.0, 20, 0, 0,3, "Incendiary rounds that ignite targets."),
+                new ShotgunShell("Dragonsbreath", "12", 105, 3.1, 21, 0, 0,2, "Burns targets for additional damage."),
+                new ShotgunShell("Dragonsbreath", "16", 110, 3.2, 22, 0, 0,1, "Enhanced incendiary effects."),
+                new ShotgunShell("Dragonsbreath", "20", 115, 3.3, 23, 0, 0,1, "Targets burn for 1d4 rounds."),
+                new ShotgunShell("Dragonsbreath", "28", 120, 3.4, 24, 0, 0,1, "Smaller incendiary pellets."),
+                new ShotgunShell("Dragonsbreath", ".410", 125, 3.5, 25, 0, 0,0, "High-efficiency incendiary rounds."),
 
-                new ShotgunShell("Flechette", "10", 90, 2.5, 18, 0, 0, "Armour-piercing flechettes."),
-                new ShotgunShell("Flechette", "12", 95, 2.6, 19, 0, 0, "Pierces through armor."),
-                new ShotgunShell("Flechette", "16", 100, 2.7, 20, 0, 0, "High-velocity flechettes."),
-                new ShotgunShell("Flechette", "20", 105, 2.8, 21, 0, 0, "Enhanced piercing capabilities."),
-                new ShotgunShell("Flechette", "28", 110, 2.9, 22, 0, 0, "Small flechettes with high penetration."),
-                new ShotgunShell("Flechette", ".410", 115, 3.0, 23, 0, 0, "Compact flechette rounds."),
+                new ShotgunShell("Flechette", "10", 90, 2.5, 18, 0, 0,3, "Armour-piercing flechettes."),
+                new ShotgunShell("Flechette", "12", 95, 2.6, 19, 0, 0,2, "Pierces through armor."),
+                new ShotgunShell("Flechette", "16", 100, 2.7, 20, 0, 0,1, "High-velocity flechettes."),
+                new ShotgunShell("Flechette", "20", 105, 2.8, 21, 0, 0,1, "Enhanced piercing capabilities."),
+                new ShotgunShell("Flechette", "28", 110, 2.9, 22, 0, 0,1, "Small flechettes with high penetration."),
+                new ShotgunShell("Flechette", ".410", 115, 3.0, 23, 0, 0,0, "Compact flechette rounds."),
 
-                new ShotgunShell("Beanbag", "10", 50, 1.0, 3, 0, 0, "Non-lethal beanbag rounds."),
-                new ShotgunShell("Beanbag", "12", 55, 1.1, 4, 0, 0, "Causes concussive impact."),
-                new ShotgunShell("Beanbag", "16", 60, 1.2, 5, 0, 0, "Minimal penetration, maximum blunt force."),
-                new ShotgunShell("Beanbag", "20", 65, 1.3, 6, 0, 0, "Non-lethal and effective."),
-                new ShotgunShell("Beanbag", "28", 70, 1.4, 7, 0, 0, "High-impact non-lethal rounds."),
-                new ShotgunShell("Beanbag", ".410", 75, 1.5, 8, 0, 0, "Small caliber non-lethal ammo."),
+                new ShotgunShell("Beanbag", "10", 50, 1.0, 3, 0, 0,3, "Non-lethal beanbag rounds."),
+                new ShotgunShell("Beanbag", "12", 55, 1.1, 4, 0, 0,2, "Causes concussive impact."),
+                new ShotgunShell("Beanbag", "16", 60, 1.2, 5, 0, 0,1, "Minimal penetration, maximum blunt force."),
+                new ShotgunShell("Beanbag", "20", 65, 1.3, 6, 0, 0,1, "Non-lethal and effective."),
+                new ShotgunShell("Beanbag", "28", 70, 1.4, 7, 0, 0,1, "High-impact non-lethal rounds."),
+                new ShotgunShell("Beanbag", ".410", 75, 1.5, 8, 0, 0,0, "Small caliber non-lethal ammo."),
 
-                new ShotgunShell("Slug", "10", 120, 3.0, 25, 0, 0, "Heavy slugs for maximum damage."),
-                new ShotgunShell("Slug", "12", 125, 3.1, 26, 0, 0, "Standard slug rounds."),
-                new ShotgunShell("Slug", "16", 130, 3.2, 27, 0, 0, "High-penetration slugs."),
-                new ShotgunShell("Slug", "20", 135, 3.3, 28, 0, 0, "Enhanced accuracy slugs."),
-                new ShotgunShell("Slug", "28", 140, 3.4, 29, 0, 0, "Small, precise slugs."),
-                new ShotgunShell("Slug", ".410", 145, 3.5, 30, 0, 0, "Compact slugs for light rifles.")
+                new ShotgunShell("Slug", "10", 120, 3.0, 12, 0, 0,3, "Heavy slugs for maximum damage."),
+                new ShotgunShell("Slug", "12", 125, 3.1, 26, 0, 0,2, "Standard slug rounds."),
+                new ShotgunShell("Slug", "16", 130, 3.2, 27, 0, 0,1, "High-penetration slugs."),
+                new ShotgunShell("Slug", "20", 135, 3.3, 28, 0, 0,1, "Enhanced accuracy slugs."),
+                new ShotgunShell("Slug", "28", 140, 3.4, 29, 0, 0,1, "Small, precise slugs."),
+                new ShotgunShell("Slug", ".410", 145, 3.5, 30, 0, 0,0, "Compact slugs for light rifles.")
             };
         }
 
@@ -622,6 +622,9 @@ namespace GunBuilder
         /// <summary>
         /// Calculates and displays weapon properties based on current selections.
         /// </summary>
+        /// <summary>
+        /// Calculates and displays weapon properties based on current selections.
+        /// </summary>
         private void CalculateAndDisplayWeaponProperties()
         {
             try
@@ -650,31 +653,38 @@ namespace GunBuilder
                 int totalDamageMod = baseDamage;       // Start with base damage
                 int totalHideMod = 0;
                 int totalACMod = 0;
-                StringBuilder combinedNotes = new StringBuilder();
 
-                combinedNotes.AppendLine($"Frame: {selectedFrame.Name}");
-                combinedNotes.AppendLine($"Base Price: {basePriceCorium} Corium");
-                combinedNotes.AppendLine($"Base Weight: {baseWeightKg} kg");
-                combinedNotes.AppendLine($"Base Damage: {baseDamage}");
-                combinedNotes.AppendLine("----------------------------");
+                // StringBuilders for different sections
+                StringBuilder weaponProperties = new StringBuilder();
+                StringBuilder attachmentsSection = new StringBuilder();
+                StringBuilder specialNotes = new StringBuilder();
+                StringBuilder debugInfo = new StringBuilder();
+
+                // Start compiling debug information
+                debugInfo.AppendLine("=== Debug Information ===");
+                debugInfo.AppendLine($"Selected Frame: {selectedFrame.Name}");
+                debugInfo.AppendLine($"Base Price: {basePriceCorium} Corium");
+                debugInfo.AppendLine($"Base Weight: {baseWeightKg} kg");
+                debugInfo.AppendLine($"Base Damage: {baseDamage}");
+                debugInfo.AppendLine("----------------------------");
 
                 // Weapon Type
                 string weaponType = "Unknown";
                 if (WeaponTypeComboBox.SelectedItem is ComboBoxItem selectedWeaponType)
                 {
                     weaponType = selectedWeaponType.Content.ToString();
-                    combinedNotes.AppendLine($"Weapon Type: {weaponType}");
+                    debugInfo.AppendLine($"Weapon Type Selected: {weaponType}");
                 }
                 else
                 {
-                    combinedNotes.AppendLine("Weapon Type: Not selected.");
+                    debugInfo.AppendLine("Weapon Type not selected.");
                 }
 
                 // Action
                 if (ActionComboBox.SelectedItem is ComboBoxItem selectedAction)
                 {
                     string action = selectedAction.Content.ToString();
-                    combinedNotes.AppendLine($"Action: {action}");
+                    debugInfo.AppendLine($"Action Selected: {action}");
 
                     // Modify price and weight based on action (percentage-based)
                     switch (action)
@@ -682,72 +692,86 @@ namespace GunBuilder
                         case "Flintlock":
                             totalPriceModPercentage += 0.05; // 5%
                             totalWeightModPercentage += 0.10; // 10%
-                            combinedNotes.AppendLine("Action: Flintlock increases weapon weight by 10% and price by 5%.");
+                            specialNotes.AppendLine("Action: Flintlock increases weapon weight by 10% and price by 5%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +5% Price, +10% Weight");
                             break;
                         case "Matchlock":
                             totalPriceModPercentage += 0.04; // 4%
                             totalWeightModPercentage += 0.08; // 8%
-                            combinedNotes.AppendLine("Action: Matchlock moderately increases weapon weight by 8% and price by 4%.");
+                            specialNotes.AppendLine("Action: Matchlock moderately increases weapon weight by 8% and price by 4%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +4% Price, +8% Weight");
                             break;
                         case "Pump Action":
                             totalPriceModPercentage += 0.06; // 6%
                             totalWeightModPercentage += 0.12; // 12%
-                            combinedNotes.AppendLine("Action: Pump Action increases weapon weight by 12% and price by 6%.");
+                            specialNotes.AppendLine("Action: Pump Action increases weapon weight by 12% and price by 6%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +6% Price, +12% Weight");
                             break;
                         case "Lever Action":
                             totalPriceModPercentage += 0.055; // 5.5%
                             totalWeightModPercentage += 0.11;  // 11%
-                            combinedNotes.AppendLine("Action: Lever Action moderately increases weapon weight by 11% and price by 5.5%.");
+                            specialNotes.AppendLine("Action: Lever Action moderately increases weapon weight by 11% and price by 5.5%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +5.5% Price, +11% Weight");
                             break;
                         case "Bolt Action":
                             totalPriceModPercentage += 0.08; // 8%
                             totalWeightModPercentage += 0.15; // 15%
-                            combinedNotes.AppendLine("Action: Bolt Action significantly increases weapon weight by 15% and price by 8%.");
+                            specialNotes.AppendLine("Action: Bolt Action significantly increases weapon weight by 15% and price by 8%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +8% Price, +15% Weight");
                             break;
                         case "Break Action":
                             totalPriceModPercentage += 0.07; // 7%
                             totalWeightModPercentage += 0.13; // 13%
-                            combinedNotes.AppendLine("Action: Break Action moderately increases weapon weight by 13% and price by 7%.");
+                            specialNotes.AppendLine("Action: Break Action moderately increases weapon weight by 13% and price by 7%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +7% Price, +13% Weight");
                             break;
                         case "Single Action":
                             totalPriceModPercentage += 0.045; // 4.5%
                             totalWeightModPercentage += 0.09;  // 9%
-                            combinedNotes.AppendLine("Action: Single Action increases weapon weight by 9% and price by 4.5%.");
+                            specialNotes.AppendLine("Action: Single Action increases weapon weight by 9% and price by 4.5%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +4.5% Price, +9% Weight");
                             break;
                         case "Double Action":
                             totalPriceModPercentage += 0.05; // 5%
                             totalWeightModPercentage += 0.10; // 10%
-                            combinedNotes.AppendLine("Action: Double Action moderately increases weapon weight by 10% and price by 5%.");
+                            specialNotes.AppendLine("Action: Double Action moderately increases weapon weight by 10% and price by 5%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +5% Price, +10% Weight");
                             break;
                         case "Semi-Automatic":
                             totalPriceModPercentage += 0.10; // 10%
                             totalWeightModPercentage += 0.18; // 18%
-                            combinedNotes.AppendLine("Action: Semi-Automatic significantly increases weapon weight by 18% and price by 10%.");
+                            specialNotes.AppendLine("Action: Semi-Automatic significantly increases weapon weight by 18% and price by 10%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +10% Price, +18% Weight");
                             break;
                         case "Burst":
                             totalPriceModPercentage += 0.11; // 11%
                             totalWeightModPercentage += 0.20; // 20%
-                            combinedNotes.AppendLine("Action: Burst mode significantly increases weapon weight by 20% and price by 11%.");
+                            specialNotes.AppendLine("Action: Burst mode significantly increases weapon weight by 20% and price by 11%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +11% Price, +20% Weight");
                             break;
                         case "Automatic":
                             totalPriceModPercentage += 0.15; // 15%
                             totalWeightModPercentage += 0.25; // 25%
-                            combinedNotes.AppendLine("Action: Automatic mode greatly increases weapon weight by 25% and price by 15%.");
+                            specialNotes.AppendLine("Action: Automatic mode greatly increases weapon weight by 25% and price by 15%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +15% Price, +25% Weight");
                             break;
                         case "Semi/Burst":
                             totalPriceModPercentage += 0.12; // 12%
                             totalWeightModPercentage += 0.22; // 22%
-                            combinedNotes.AppendLine("Action: Semi/Burst mode significantly increases weapon weight by 22% and price by 12%.");
+                            specialNotes.AppendLine("Action: Semi/Burst mode significantly increases weapon weight by 22% and price by 12%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +12% Price, +22% Weight");
                             break;
                         case "Semi/Full":
                             totalPriceModPercentage += 0.13; // 13%
                             totalWeightModPercentage += 0.24; // 24%
-                            combinedNotes.AppendLine("Action: Semi/Full mode greatly increases weapon weight by 24% and price by 13%.");
+                            specialNotes.AppendLine("Action: Semi/Full mode greatly increases weapon weight by 24% and price by 13%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +13% Price, +24% Weight");
                             break;
                         case "Semi/Burst/Full":
                             totalPriceModPercentage += 0.16; // 16%
                             totalWeightModPercentage += 0.28; // 28%
-                            combinedNotes.AppendLine("Action: Semi/Burst/Full mode drastically increases weapon weight by 28% and price by 16%.");
+                            specialNotes.AppendLine("Action: Semi/Burst/Full mode drastically increases weapon weight by 28% and price by 16%.");
+                            debugInfo.AppendLine("Action Modifier Applied: +16% Price, +28% Weight");
                             break;
                         default:
                             break;
@@ -755,14 +779,14 @@ namespace GunBuilder
                 }
                 else
                 {
-                    combinedNotes.AppendLine("Action: Not selected.");
+                    debugInfo.AppendLine("Action not selected.");
                 }
 
                 // Magazine Style
                 if (MagazineStyleComboBox.SelectedItem is ComboBoxItem selectedMagazine)
                 {
                     string magazineStyle = selectedMagazine.Content.ToString();
-                    combinedNotes.AppendLine($"Magazine Style: {magazineStyle}");
+                    debugInfo.AppendLine($"Magazine Style Selected: {magazineStyle}");
 
                     // Modify price and weight based on magazine style (percentage-based)
                     switch (magazineStyle)
@@ -770,57 +794,68 @@ namespace GunBuilder
                         case "Muzzle Loader":
                             totalPriceModPercentage += 0.08; // 8%
                             totalWeightModPercentage += 0.15; // 15%
-                            combinedNotes.AppendLine("Magazine Style: Muzzle Loader increases weapon weight by 15% and price by 8%.");
+                            specialNotes.AppendLine("Magazine Style: Muzzle Loader increases weapon weight by 15% and price by 8%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +8% Price, +15% Weight");
                             break;
                         case "Breachloader":
                             totalPriceModPercentage += 0.07; // 7%
                             totalWeightModPercentage += 0.12; // 12%
-                            combinedNotes.AppendLine("Magazine Style: Breachloader moderately increases weapon weight by 12% and price by 7%.");
+                            specialNotes.AppendLine("Magazine Style: Breachloader moderately increases weapon weight by 12% and price by 7%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +7% Price, +12% Weight");
                             break;
                         case "Tube-fed":
                             totalPriceModPercentage += 0.06; // 6%
                             totalWeightModPercentage += 0.10; // 10%
-                            combinedNotes.AppendLine("Magazine Style: Tube-fed moderately increases weapon weight by 10% and price by 6%.");
+                            specialNotes.AppendLine("Magazine Style: Tube-fed moderately increases weapon weight by 10% and price by 6%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +6% Price, +10% Weight");
                             break;
                         case "Cylinder":
                             totalPriceModPercentage += 0.09; // 9%
                             totalWeightModPercentage += 0.14; // 14%
-                            combinedNotes.AppendLine("Magazine Style: Cylinder significantly increases weapon weight by 14% and price by 9%.");
+                            specialNotes.AppendLine("Magazine Style: Cylinder significantly increases weapon weight by 14% and price by 9%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +9% Price, +14% Weight");
                             break;
                         case "Clip":
                             totalPriceModPercentage += 0.05; // 5%
                             totalWeightModPercentage += 0.08; // 8%
-                            combinedNotes.AppendLine("Magazine Style: Clip moderately increases weapon weight by 8% and price by 5%.");
+                            specialNotes.AppendLine("Magazine Style: Clip moderately increases weapon weight by 8% and price by 5%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +5% Price, +8% Weight");
                             break;
                         case "En Bloc Clip":
                             totalPriceModPercentage += 0.065; // 6.5%
                             totalWeightModPercentage += 0.09;  // 9%
-                            combinedNotes.AppendLine("Magazine Style: En Bloc Clip moderately increases weapon weight by 9% and price by 6.5%.");
+                            specialNotes.AppendLine("Magazine Style: En Bloc Clip moderately increases weapon weight by 9% and price by 6.5%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +6.5% Price, +9% Weight");
                             break;
                         case "Box Magazine":
                             totalPriceModPercentage += 0.10; // 10%
                             totalWeightModPercentage += 0.16; // 16%
-                            combinedNotes.AppendLine("Magazine Style: Box Magazine significantly increases weapon weight by 16% and price by 10%.");
+                            specialNotes.AppendLine("Magazine Style: Box Magazine significantly increases weapon weight by 16% and price by 10%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +10% Price, +16% Weight");
                             break;
                         case "Drum Magazine":
                             totalPriceModPercentage += 0.12; // 12%
                             totalWeightModPercentage += 0.20; // 20%
-                            combinedNotes.AppendLine("Magazine Style: Drum Magazine greatly increases weapon weight by 20% and price by 12%.");
+                            specialNotes.AppendLine("Magazine Style: Drum Magazine greatly increases weapon weight by 20% and price by 12%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +12% Price, +20% Weight");
                             break;
                         case "Detachable Magazine":
                             totalPriceModPercentage += 0.11; // 11%
                             totalWeightModPercentage += 0.18; // 18%
-                            combinedNotes.AppendLine("Magazine Style: Detachable Magazine significantly increases weapon weight by 18% and price by 11%.");
+                            specialNotes.AppendLine("Magazine Style: Detachable Magazine significantly increases weapon weight by 18% and price by 11%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +11% Price, +18% Weight");
                             break;
                         case "Belt-fed":
                             totalPriceModPercentage += 0.14; // 14%
                             totalWeightModPercentage += 0.22; // 22%
-                            combinedNotes.AppendLine("Magazine Style: Belt-fed greatly increases weapon weight by 22% and price by 14%.");
+                            specialNotes.AppendLine("Magazine Style: Belt-fed greatly increases weapon weight by 22% and price by 14%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +14% Price, +22% Weight");
                             break;
                         case "Integrated Drum":
                             totalPriceModPercentage += 0.16; // 16%
                             totalWeightModPercentage += 0.25; // 25%
-                            combinedNotes.AppendLine("Magazine Style: Integrated Drum drastically increases weapon weight by 25% and price by 16%.");
+                            specialNotes.AppendLine("Magazine Style: Integrated Drum drastically increases weapon weight by 25% and price by 16%.");
+                            debugInfo.AppendLine("Magazine Style Modifier Applied: +16% Price, +25% Weight");
                             break;
                         default:
                             break;
@@ -828,7 +863,7 @@ namespace GunBuilder
                 }
                 else
                 {
-                    combinedNotes.AppendLine("Magazine Style: Not selected.");
+                    debugInfo.AppendLine("Magazine Style not selected.");
                 }
 
                 // Ammo or Shotgun Shells
@@ -836,48 +871,43 @@ namespace GunBuilder
                 {
                     if (SelectedAmmo != null && SelectedAmmo.Type == "Pistol")
                     {
-                        // Assuming ammo does not affect price and weight
-                        //totalDamageMod += SelectedAmmo.DamageMod;
                         totalHideMod += SelectedAmmo.HideMod;
                         totalACMod += SelectedAmmo.ACMod;
-                        combinedNotes.AppendLine($"Ammo: {SelectedAmmo.Name}");
-                        combinedNotes.AppendLine($"Note: {SelectedAmmo.Note}");
+                        attachmentsSection.AppendLine($"- Ammo: {SelectedAmmo.Name} ({SelectedAmmo.Note})");
+                        debugInfo.AppendLine($"Pistol Ammo Selected: {SelectedAmmo.Name}");
                     }
                     else
                     {
-                        combinedNotes.AppendLine("Ammo: Not selected.");
+                        debugInfo.AppendLine("Pistol Ammo not selected.");
                     }
                 }
                 else if (RifleAmmoGrid != null && RifleAmmoGrid.Visibility == Visibility.Visible)
                 {
                     if (SelectedAmmo != null && SelectedAmmo.Type == "Rifle")
                     {
-                        // Assuming ammo does not affect price and weight
-                        //totalDamageMod += SelectedAmmo.DamageMod;
                         totalHideMod += SelectedAmmo.HideMod;
                         totalACMod += SelectedAmmo.ACMod;
-                        combinedNotes.AppendLine($"Ammo: {SelectedAmmo.Name}");
-                        combinedNotes.AppendLine($"Note: {SelectedAmmo.Note}");
+                        attachmentsSection.AppendLine($"- Ammo: {SelectedAmmo.Name} ({SelectedAmmo.Note})");
+                        debugInfo.AppendLine($"Rifle Ammo Selected: {SelectedAmmo.Name}");
                     }
                     else
                     {
-                        combinedNotes.AppendLine("Ammo: Not selected.");
+                        debugInfo.AppendLine("Rifle Ammo not selected.");
                     }
                 }
                 else if (ShotgunShellGrid != null && ShotgunShellGrid.Visibility == Visibility.Visible)
                 {
                     if (SelectedShotgunShell != null)
                     {
-                        // Assuming shotgun shells do not affect price and weight
                         //totalDamageMod += SelectedShotgunShell.DamageMod;
                         totalHideMod += SelectedShotgunShell.HideMod;
                         totalACMod += SelectedShotgunShell.ACMod;
-                        combinedNotes.AppendLine($"Shotgun Shell: {SelectedShotgunShell.Name} Gauge {SelectedShotgunShell.Gauge}");
-                        combinedNotes.AppendLine($"Note: {SelectedShotgunShell.Note}");
+                        attachmentsSection.AppendLine($"- Shotgun Shell: {SelectedShotgunShell.Name} Gauge {SelectedShotgunShell.Gauge} ({SelectedShotgunShell.Note})");
+                        debugInfo.AppendLine($"Shotgun Shell Selected: {SelectedShotgunShell.Name} Gauge {SelectedShotgunShell.Gauge}");
                     }
                     else
                     {
-                        combinedNotes.AppendLine("Shotgun Shell: Not selected.");
+                        debugInfo.AppendLine("Shotgun Shell not selected.");
                     }
                 }
 
@@ -893,33 +923,28 @@ namespace GunBuilder
                     totalHideMod += SelectedBarrelType.HideMod;
                     totalACMod += SelectedBarrelType.ACMod;
 
-                    combinedNotes.AppendLine($"Barrel Type: {SelectedBarrelType.Name}");
-                    combinedNotes.AppendLine($"Note: {SelectedBarrelType.Note}");
-                }
-                else
-                {
-                    combinedNotes.AppendLine("Barrel Type: Not selected.");
+                    attachmentsSection.AppendLine($"- Barrel Type: {SelectedBarrelType.Name} ({SelectedBarrelType.Note})");
+                    debugInfo.AppendLine($"Barrel Type Selected: {SelectedBarrelType.Name}");
                 }
 
                 // Rifling
                 if (RiflingComboBox.SelectedItem is ComboBoxItem selectedRifling)
                 {
                     string rifling = selectedRifling.Content.ToString();
-                    combinedNotes.AppendLine($"Rifling: {rifling}");
+                    debugInfo.AppendLine($"Rifling Selected: {rifling}");
+
                     if (rifling == "Rifled")
                     {
                         totalDamageMod += 2;
-                        combinedNotes.AppendLine("Rifled barrels increase accuracy and damage.");
+                        specialNotes.AppendLine("Rifling: Rifled barrels increase accuracy and damage.");
+                        debugInfo.AppendLine("Rifling Modifier Applied: +2 Damage");
                     }
                     else
                     {
-                        totalDamageMod -= 0;
-                        combinedNotes.AppendLine("Smooth bore barrels decrease accuracy and damage.");
+                        // Assuming smooth bore decreases damage by 0
+                        specialNotes.AppendLine("Rifling: Smooth bore barrels decrease accuracy and damage.");
+                        debugInfo.AppendLine("Rifling Modifier Applied: +0 Damage");
                     }
-                }
-                else
-                {
-                    combinedNotes.AppendLine("Rifling: Not selected.");
                 }
 
                 // Attachments
@@ -932,13 +957,10 @@ namespace GunBuilder
                         totalDamageMod += attachment.DamageMod;
                         totalHideMod += attachment.HideMod;
                         totalACMod += attachment.ACMod;
-                        combinedNotes.AppendLine($"Attachment: {attachment.Name}");
-                        combinedNotes.AppendLine($"Note: {attachment.Note}");
+
+                        attachmentsSection.AppendLine($"- Attachment: {attachment.Name} ({attachment.Note})");
+                        debugInfo.AppendLine($"Attachment Added: {attachment.Name}");
                     }
-                }
-                else
-                {
-                    combinedNotes.AppendLine("Attachments: None selected.");
                 }
 
                 // Stock
@@ -953,12 +975,8 @@ namespace GunBuilder
                     totalHideMod += SelectedStock.HideMod;
                     totalACMod += SelectedStock.ACMod;
 
-                    combinedNotes.AppendLine($"Stock: {SelectedStock.Name}");
-                    combinedNotes.AppendLine($"Note: {SelectedStock.Note}");
-                }
-                else
-                {
-                    combinedNotes.AppendLine("Stock: Not selected.");
+                    attachmentsSection.AppendLine($"- Stock: {SelectedStock.Name} ({SelectedStock.Note})");
+                    debugInfo.AppendLine($"Stock Selected: {SelectedStock.Name}");
                 }
 
                 // Barrel Length in mm
@@ -994,6 +1012,7 @@ namespace GunBuilder
                     {
                         additionalDice -= 1;
                         lengthCategory += " (Sniper/DMR/LMG: -1 die)";
+                        debugInfo.AppendLine("Special Case Applied: Sniper/DMR/LMG with barrel length <200mm");
                     }
 
                     // Ensure additionalDice is not negative
@@ -1001,44 +1020,137 @@ namespace GunBuilder
                         additionalDice = 0;
 
                     totalDamageMod += additionalDice;
-                    combinedNotes.AppendLine($"Barrel Length: {lengthMm} mm ({lengthCategory})");
-                    combinedNotes.AppendLine($"Note: Barrel length adds {additionalDice} damage dice.");
+                    specialNotes.AppendLine($"Barrel Length: {lengthMm} mm ({lengthCategory})");
+                    debugInfo.AppendLine($"Barrel Length Entered: {lengthMm} mm, Category: {lengthCategory}, Damage Modifier: +{additionalDice}");
+                }
+
+                // Calculate Dice Modifier based on Ammo roundsize
+                int roundsizeDiceModifier = 0;
+                if (SelectedAmmo != null)
+                {
+                    double roundsize = SelectedAmmo.RoundSize; // Assuming roundsize is a property in Ammo class
+
+                    // Determine dice modifier based on roundsize
+                    if (roundsize >= 0.01 && roundsize <= 0.09)
+                    {
+                        roundsizeDiceModifier = -1;
+                    }
+                    else if (roundsize >= 0.1 && roundsize <= 0.199)
+                    {
+                        roundsizeDiceModifier = 0;
+                    }
+                    else if (roundsize >= 0.2 && roundsize <= 0.399)
+                    {
+                        roundsizeDiceModifier = 1;
+                    }
+                    else if (roundsize >= 0.4 && roundsize <= 0.599)
+                    {
+                        roundsizeDiceModifier = 2;
+                    }
+                    else if (roundsize >= 0.6 && roundsize <= 0.849)
+                    {
+                        roundsizeDiceModifier = 3;
+                    }
+                    else if (roundsize >= 0.85 && roundsize <= 1.0)
+                    {
+                        roundsizeDiceModifier = 4;
+                    }
+                    else if (roundsize > 1.0)
+                    {
+                        roundsizeDiceModifier = 5;
+                    }
+
+                    specialNotes.AppendLine($"Roundsize Dice Modifier: {roundsizeDiceModifier}");
+                    debugInfo.AppendLine($"Ammo Roundsize: {roundsize}, Dice Modifier: {roundsizeDiceModifier}");
                 }
                 else
                 {
-                    combinedNotes.AppendLine("Barrel Length: Not specified or invalid input.");
+                    debugInfo.AppendLine("Ammo not selected for roundsize dice modifier.");
                 }
 
-                // Calculate Final Price and Weight
+
+
+
+
+                int ammoDamagePerDie;
+
+                // Check if the selected frame is a Shotgun and a Shotgun Shell is selected
+                if (selectedFrame != null && selectedFrame.Name.Equals("Shotgun", StringComparison.OrdinalIgnoreCase) && SelectedShotgunShell != null)
+                {
+                    ammoDamagePerDie = SelectedShotgunShell.DamageMod;
+                    totalDamageMod += SelectedShotgunShell.GaugeDamageMod;
+                    // Halve and round up the total damage
+                    totalDamageMod = (int)Math.Ceiling(totalDamageMod / 2.0);
+                    debugInfo.AppendLine($"Total Damage Modifier after Halving and Rounding Up: {totalDamageMod}");
+                }
+                else
+                {
+                    // Add the roundsizeDiceModifier to totalDamageMod
+                    totalDamageMod += roundsizeDiceModifier;
+                    debugInfo.AppendLine($"Total Damage Modifier after Roundsize: {totalDamageMod}");
+
+                    ammoDamagePerDie = SelectedAmmo != null ? SelectedAmmo.DamageMod : 0;
+                    // Halve and round up the total damage
+                    totalDamageMod = (int)Math.Ceiling(totalDamageMod / 2.0);
+                    debugInfo.AppendLine($"Total Damage Modifier after Halving and Rounding Up: {totalDamageMod}");
+                }
+
+                // Final calculations
                 double finalPriceCorium = basePriceCorium * (1 + totalPriceModPercentage);
                 double finalWeightKg = baseWeightKg * (1 + totalWeightModPercentage);
-
-                // Calculate Damage Dice
                 int damageDice = totalDamageMod;
-
-                // Get Ammo Damage per Die
-                int ammoDamagePerDie = SelectedShotgunShell != null ? SelectedShotgunShell.DamageMod : 0;
+                
 
 
+                // Compile Weapon Properties Section
+                weaponProperties.AppendLine("**Weapon Properties:**");
+                weaponProperties.AppendLine("----------------------------");
+                weaponProperties.AppendLine($"**Final Price:** {finalPriceCorium:F2} Corium");
+                weaponProperties.AppendLine($"**Final Weight:** {finalWeightKg:F2} kg");
+                weaponProperties.AppendLine($"**Final Damage:** {damageDice}d{ammoDamagePerDie}");
+                weaponProperties.AppendLine($"**Total Hide Modifier:** {totalHideMod}");
+                weaponProperties.AppendLine($"**Total AC Modifier:** {totalACMod}");
+                weaponProperties.AppendLine("----------------------------");
 
-                // Compile final output
+                // Compile Attachments Section
+                if (attachmentsSection.Length > 0)
+                {
+                    attachmentsSection.Insert(0, "**Attachments:**\n");
+                    attachmentsSection.AppendLine("----------------------------");
+                }
+                else
+                {
+                    attachmentsSection.AppendLine("**Attachments:**");
+                    attachmentsSection.AppendLine("None selected.");
+                    attachmentsSection.AppendLine("----------------------------");
+                }
+
+                // Compile Special Notes Section
+                if (specialNotes.Length > 0)
+                {
+                    specialNotes.Insert(0, "**Special Notes:**\n");
+                    specialNotes.AppendLine("----------------------------");
+                }
+                else
+                {
+                    specialNotes.AppendLine("**Special Notes:**");
+                    specialNotes.AppendLine("None.");
+                    specialNotes.AppendLine("----------------------------");
+                }
+
+                // Compile Debug Information Section
+                debugInfo.AppendLine("============================");
+                debugInfo.Insert(0, "**Debug Information:**\n");
+                debugInfo.AppendLine("============================");
+
+                // Compile Final Output
                 StringBuilder finalOutput = new StringBuilder();
                 finalOutput.AppendLine("**Weapon Configuration:**");
                 finalOutput.AppendLine("----------------------------");
-                finalOutput.AppendLine($"**Base Price:** {basePriceCorium} Corium");
-                finalOutput.AppendLine($"**Total Price Modifier:** {totalPriceModPercentage * 100:F1}%");
-                finalOutput.AppendLine($"**Final Price:** {finalPriceCorium:F2} Corium");
-                finalOutput.AppendLine($"**Base Weight:** {baseWeightKg} kg");
-                finalOutput.AppendLine($"**Total Weight Modifier:** {totalWeightModPercentage * 100:F1}%");
-                finalOutput.AppendLine($"**Final Weight:** {finalWeightKg:F2} kg");
-                finalOutput.AppendLine($"**Base Damage:** {baseDamage}");
-                finalOutput.AppendLine($"**Total Damage Modifier:** {totalDamageMod - baseDamage}");
-                finalOutput.AppendLine($"**Final Damage:** {damageDice}d{ammoDamagePerDie}");
-                finalOutput.AppendLine($"**Total Hide Modifier:** {totalHideMod}");
-                finalOutput.AppendLine($"**Total AC Modifier:** {totalACMod}");
-                finalOutput.AppendLine("----------------------------");
-                finalOutput.AppendLine("**Special Notes:**");
-                finalOutput.AppendLine(combinedNotes.ToString());
+                finalOutput.Append(weaponProperties.ToString());
+                finalOutput.AppendLine(attachmentsSection.ToString());
+                finalOutput.AppendLine(specialNotes.ToString());
+                finalOutput.AppendLine(debugInfo.ToString());
 
                 // Update the OutputTextBox
                 if (OutputTextBox != null)
