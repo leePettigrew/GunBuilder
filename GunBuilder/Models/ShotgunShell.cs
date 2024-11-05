@@ -9,8 +9,8 @@ namespace GunBuilder.Models
         public string Gauge { get; set; }
         public int GaugeDamageMod { get; set; }
 
-        public ShotgunShell(string name, string gauge, double priceMod, double weightMod, int damageMod, int hideMod, int acMod,int gaugeDamageMod, string note)
-            : base(name, priceMod, weightMod, damageMod, hideMod, acMod, note)
+        public ShotgunShell(string name, string gauge, double priceMod, double weightMod, int damageMod, int extraDice, int hideMod, int acMod,int gaugeDamageMod, string note)
+            : base(name, priceMod, weightMod, damageMod, extraDice, hideMod, acMod, note)
         {
             Gauge = gauge;
             GaugeDamageMod = gaugeDamageMod;

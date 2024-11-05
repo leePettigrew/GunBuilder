@@ -6,8 +6,8 @@ namespace GunBuilder.Models
     /// </summary>
     public class Stock : WeaponComponent
     {
-        public Stock(string name, double priceMod, double weightMod, int damageMod, int hideMod, int acMod, string note)
-            : base(name, priceMod, weightMod, damageMod, hideMod, acMod, note)
+        public Stock(string name, double priceMod, double weightMod, int damageMod, int extraDice, int hideMod, int acMod, string note)
+            : base(name, priceMod, weightMod, damageMod, extraDice, hideMod, acMod, note)
         {
         }
     }

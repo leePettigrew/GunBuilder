@@ -6,8 +6,8 @@ namespace GunBuilder.Models
     /// </summary>
     public class BarrelType : WeaponComponent
     {
-        public BarrelType(string name, double priceMod, double weightMod, int damageMod, int hideMod, int acMod, string note)
-            : base(name, priceMod, weightMod, damageMod, hideMod, acMod, note)
+        public BarrelType(string name, double priceMod, double weightMod, int damageMod, int extraDice, int hideMod, int acMod, string note)
+            : base(name, priceMod, weightMod, damageMod, extraDice, hideMod, acMod, note)
         {
         }
     }

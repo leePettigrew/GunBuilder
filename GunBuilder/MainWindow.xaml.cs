@@ -134,35 +134,36 @@ namespace GunBuilder
             {
                 // Pistol Calibers
                 // You can change all of these or add more as needed.
-                //       Name                 Type      Price  Weight  Damage  Hide  AC roundsize  Note
-                new Ammo("9x19mm Parabellum", "Pistol", 50, 2.0, 5, 0, 0,0.0, "Standard pistol ammunition."),
-                new Ammo(".45 ACP", "Pistol", 70, 1.2, 6, 0, 0,0.0, "Higher stopping power."),
-                new Ammo(".40 S&W", "Pistol", 65, 1.1, 5, 0, 0,0.0, "Balanced performance."),
-                new Ammo(".380 ACP", "Pistol", 40, 0.8, 4, 0, 0,0.0, "Compact pistol ammo."),
-                new Ammo(".357 Magnum", "Pistol", 90, 1.5, 7, 0, 0,0.0, "High-velocity rounds."),
-                new Ammo(".38 Special", "Pistol", 60, 1.0, 5, 0, 0,0.0, "Reliable and accurate."),
-                new Ammo(".22 LR", "Pistol", 30, 0.5, 3, 0, 0,0.0, "Low recoil and cost."),
-                new Ammo(".44 Magnum", "Pistol", 110, 1.8, 8, 0, 0,0.0, "Maximum power for pistols."),
-                new Ammo(".50 Action Express", "Pistol", 130, 2.0, 9, 0, 0,0.0, "Extreme stopping power."),
-                new Ammo(".500 Linebaugh", "Pistol", 150, 2.2, 10, 0, 0,0.0, "Custom heavy-duty rounds."),
-                new Ammo("Improvised Ammo", "Pistol", 20, 0.4, 2, 0, 0,0.0, "Homemade ammunition."),
+                //       Name                 Type      Price  Weight  Damage  Dice  Hide  AC roundsize  Note
+                new Ammo("9x19mm Parabellum", "Pistol", 50, 2.0, 6, 0, 0, 0,0.336, "Standard pistol ammunition."),
+                new Ammo(".45 ACP", "Pistol", 70, 1.2, 6, 0, 0, 0,0.411, "Higher stopping power."),
+                new Ammo(".40 S&W", "Pistol", 65, 1.1, 6, 0, 0, 0,0.369, "Balanced performance."),
+                new Ammo(".380 ACP", "Pistol", 40, 0.8, 4, 0, 0, 0,0.32, "Compact pistol ammo."),
+                new Ammo(".357 Magnum", "Pistol", 90, 1.5, 6, 0, 0, 0,0.39, "High-velocity rounds."),
+                new Ammo(".38 Special", "Pistol", 60, 1.0, 4, 0, 0, 0,0.375, "Reliable and accurate."),
+                new Ammo(".22 LR", "Pistol", 30, 0.5, 4, 0, 0, 0,0.237, "Low recoil and cost."),
+                new Ammo(".44 Magnum", "Pistol", 110, 1.8, 8, 0, 0, 0,0.444, "Maximum power for pistols."),
+                new Ammo(".50 Action Express", "Pistol", 130, 2.0, 8, 0, 0, 0,0.484, "Extreme stopping power."),
+                new Ammo(".500 Linebaugh", "Pistol", 150, 2.2, 10, 0, 0, 0,0.505, "Custom heavy-duty rounds."),
+                new Ammo("Musket Balls", "Pistol", 20, 0.4, 4, 0, 0, 0,0.48, "Homemade ammunition."),
 
                 // Rifle Calibers
-                //       Name                 Type      Price  Weight  Damage  Hide  AC roundsize  Note
-                new Ammo("5.56x45mm NATO", "Rifle", 80, 2.0, 6, 0, 0,0.377, "Standard rifle ammunition."),
-                new Ammo("7.62x39mm", "Rifle", 90, 2.5, 8, 0, 0,0.415, "Popular intermediate cartridge."),
-                new Ammo("7.62x51mm NATO (.308 Winchester)", "Rifle", 100, 3.0, 8, 0, 0,0.0, "High-precision rounds."),
-                new Ammo(".223 Remington", "Rifle", 85, 2.1, 6, 0, 0,0.0, "Versatile and accurate."),
-                new Ammo(".30-06 Springfield", "Rifle", 120, 3.5, 9, 0, 0,0.0, "Classic hunting cartridge."),
-                new Ammo(".300 Winchester Magnum", "Rifle", 130, 3.8, 10, 0, 0,0.0, "Long-range precision."),
-                new Ammo(".30-30 Winchester", "Rifle", 95, 2.8, 7, 0, 0,0.0, "Reliable for hunting."),
-                new Ammo(".45-70 Government", "Rifle", 140, 4.0, 11, 0, 0,0.0, "Powerful large-caliber."),
-                new Ammo("6.5mm Creedmoor", "Rifle", 110, 2.9, 8, 0, 0,0.0, "Popular for competition shooting."),
-                new Ammo(".50 BMG", "Rifle", 200, 5.0, 15, 0, 0,0.0, "Massive long-range rounds."),
-                new Ammo("7.62x54mm", "Rifle", 115, 3.2, 9, 0, 0,0.0, "Military standard ammunition."),
-                new Ammo(".338 Magnum", "Rifle", 125, 3.5, 10, 0, 0,0.0, "High-performance hunting rounds."),
-                new Ammo("4.73x33mm Caseless", "Rifle", 160, 4.5, 12, 0, 0,0.0, "Advanced caseless technology."),
-                new Ammo("14.5x114mm", "Rifle", 300, 6.0, 20, 0, 0,0.0, "Heavy anti-materiel rounds.")
+                //       Name                 Type      Price  Weight  Damage  Dice  Hide  AC roundsize  Note
+                new Ammo("5.56x45mm NATO", "Rifle", 80, 2.0, 6, 0, 0, 0,0.377, "Standard rifle ammunition."),
+                new Ammo("7.62x39mm", "Rifle", 90, 2.5, 8, 0, 0, 0, 0.415, "Popular intermediate cartridge."),
+                new Ammo("7.62x51mm NATO (.308 Winchester)", "Rifle", 100, 3.0, 12, 0, 0, 0,0.473, "High-precision rounds."),
+                new Ammo(".223 Remington", "Rifle", 85, 2.1, 8, 0, 0, 0,0.377, "Versatile and accurate."),
+                new Ammo(".30-06 Springfield", "Rifle", 120, 3.5, 12, 0, 0, 0,0.527, "Classic hunting cartridge."),
+                new Ammo(".300 Winchester Magnum", "Rifle", 130, 3.8, 12, 0, 0, 0,0.557, "Long-range precision."),
+                new Ammo(".30-30 Winchester", "Rifle", 95, 2.8, 10, 0, 0, 0,0.469, "Reliable for hunting."),
+                new Ammo(".45-70 Government", "Rifle", 140, 4.0, 10, 0, 0, 0,0.549, "Powerful large-caliber."),
+                new Ammo("6.5mm Creedmoor", "Rifle", 110, 2.9, 12, 0, 0, 0,0.446, "Popular for competition shooting."),
+                new Ammo(".50 BMG", "Rifle", 200, 5.0, 8, 2, 0, 0,0.859, "Massive long-range rounds."),
+                new Ammo("7.62x54mm", "Rifle", 115, 3.2, 12, 0, 0, 0,0.494, "Military standard ammunition."),
+                new Ammo(".338 Magnum", "Rifle", 125, 3.5, 12, 0, 0, 0,0.567, "High-performance hunting rounds."),
+                new Ammo("4.73x33mm Caseless", "Rifle", 160, 4.5, 8, 0, 0, 0,0.281, "Advanced caseless technology."),
+                new Ammo("14.5x114mm", "Rifle", 300, 6.0, 8, 2, 0, 0,1.0, "Heavy anti-materiel rounds."),
+                new Ammo("Musket Balls", "Rifle", 50, 1.5, 6, 0, 0, 0, 0.330, "Homemade ammunition ")
             };
         }
 
@@ -174,47 +175,47 @@ namespace GunBuilder
             ShotgunShellList = new List<ShotgunShell>
             {
                 //               Name        Gauge  Price  Weight  Damage  Hide  AC DamageDiceMod Note
-                new ShotgunShell("Birdshot", "10", 30, 1.0, 4, 0, 0,3, "Small pellets for hunting birds."),
-                new ShotgunShell("Birdshot", "12", 35, 1.1, 5, 0, 0,2, "Standard bird hunting rounds."),
-                new ShotgunShell("Birdshot", "16", 40, 1.2, 6, 0, 0,1, "Smaller pellets for tighter patterns."),
-                new ShotgunShell("Birdshot", "20", 45, 1.3, 7, 0, 0,1, "Very small pellets for precision."),
-                new ShotgunShell("Birdshot", "28", 50, 1.4, 8, 0, 0,1, "Extra small pellets for minimal damage."),
-                new ShotgunShell("Birdshot", ".410", 55, 1.5, 9, 0, 0,0, "Small caliber birdshot."),
+                new ShotgunShell("Birdshot", "10", 30, 1.0, 12, 0, 0, 0,3, "Small pellets for hunting birds."),
+                new ShotgunShell("Birdshot", "12", 35, 1.1, 12, 0, 0, 0,2, "Standard bird hunting rounds."),
+                new ShotgunShell("Birdshot", "16", 40, 1.2, 10, 0, 0, 0,1, "Smaller pellets for tighter patterns."),
+                new ShotgunShell("Birdshot", "20", 45, 1.3, 10, 0, 0, 0,1, "Very small pellets for precision."),
+                new ShotgunShell("Birdshot", "28", 50, 1.4, 8, 0, 0, 0,1, "Extra small pellets for minimal damage."),
+                new ShotgunShell("Birdshot", ".410", 55, 1.5, 8, 0, 0, 0,0, "Small caliber birdshot."),
 
-                new ShotgunShell("Buckshot", "10", 60, 2.0, 10, 0, 0,3, "Large pellets for big game."),
-                new ShotgunShell("Buckshot", "12", 65, 2.1, 11, 0, 0,2, "Standard buckshot rounds."),
-                new ShotgunShell("Buckshot", "16", 70, 2.2, 12, 0, 0,1, "Mid-sized pellets for balanced performance."),
-                new ShotgunShell("Buckshot", "20", 75, 2.3, 13, 0, 0,1, "Smaller pellets for tighter spread."),
-                new ShotgunShell("Buckshot", "28", 80, 2.4, 14, 0, 0,1, "Extra small buckshot for controlled damage."),
-                new ShotgunShell("Buckshot", ".410", 85, 2.5, 15, 0, 0,0, "Small caliber buckshot."),
+                new ShotgunShell("Buckshot", "10", 60, 2.0, 12, 0, 0, 0,3, "Large pellets for big game."),
+                new ShotgunShell("Buckshot", "12", 65, 2.1, 12, 0, 0, 0,2, "Standard buckshot rounds."),
+                new ShotgunShell("Buckshot", "16", 70, 2.2, 10, 0, 0, 0,1, "Mid-sized pellets for balanced performance."),
+                new ShotgunShell("Buckshot", "20", 75, 2.3, 10, 0, 0, 0,1, "Smaller pellets for tighter spread."),
+                new ShotgunShell("Buckshot", "28", 80, 2.4, 8, 0, 0, 0,1, "Extra small buckshot for controlled damage."),
+                new ShotgunShell("Buckshot", ".410", 85, 2.5, 8, 0, 0, 0,0, "Small caliber buckshot."),
 
-                new ShotgunShell("Dragonsbreath", "10", 100, 3.0, 20, 0, 0,3, "Incendiary rounds that ignite targets."),
-                new ShotgunShell("Dragonsbreath", "12", 105, 3.1, 21, 0, 0,2, "Burns targets for additional damage."),
-                new ShotgunShell("Dragonsbreath", "16", 110, 3.2, 22, 0, 0,1, "Enhanced incendiary effects."),
-                new ShotgunShell("Dragonsbreath", "20", 115, 3.3, 23, 0, 0,1, "Targets burn for 1d4 rounds."),
-                new ShotgunShell("Dragonsbreath", "28", 120, 3.4, 24, 0, 0,1, "Smaller incendiary pellets."),
-                new ShotgunShell("Dragonsbreath", ".410", 125, 3.5, 25, 0, 0,0, "High-efficiency incendiary rounds."),
+                new ShotgunShell("Dragonsbreath", "10", 100, 3.0, 10, 0, 0, 0,3, "Incendiary rounds that ignite targets."),
+                new ShotgunShell("Dragonsbreath", "12", 105, 3.1, 8, 0, 0, 0,2, "Burns targets for additional damage."),
+                new ShotgunShell("Dragonsbreath", "16", 110, 3.2, 8, 0, 0, 0,1, "Enhanced incendiary effects."),
+                new ShotgunShell("Dragonsbreath", "20", 115, 3.3, 8, 0, 0, 0,1, "Targets burn for 1d4 rounds."),
+                new ShotgunShell("Dragonsbreath", "28", 120, 3.4, 8, 0, 0, 0,1, "Smaller incendiary pellets."),
+                new ShotgunShell("Dragonsbreath", ".410", 125, 3.5, 6, 0, 0, 0,0, "High-efficiency incendiary rounds."),
 
-                new ShotgunShell("Flechette", "10", 90, 2.5, 18, 0, 0,3, "Armour-piercing flechettes."),
-                new ShotgunShell("Flechette", "12", 95, 2.6, 19, 0, 0,2, "Pierces through armor."),
-                new ShotgunShell("Flechette", "16", 100, 2.7, 20, 0, 0,1, "High-velocity flechettes."),
-                new ShotgunShell("Flechette", "20", 105, 2.8, 21, 0, 0,1, "Enhanced piercing capabilities."),
-                new ShotgunShell("Flechette", "28", 110, 2.9, 22, 0, 0,1, "Small flechettes with high penetration."),
-                new ShotgunShell("Flechette", ".410", 115, 3.0, 23, 0, 0,0, "Compact flechette rounds."),
+                new ShotgunShell("Flechette", "10", 90, 2.5, 12, 0, 0, 0,3, "Armour-piercing flechettes."),
+                new ShotgunShell("Flechette", "12", 95, 2.6, 12, 0, 0, 0,2, "Pierces through armor."),
+                new ShotgunShell("Flechette", "16", 100, 2.7, 10, 0, 0, 0,1, "High-velocity flechettes."),
+                new ShotgunShell("Flechette", "20", 105, 2.8, 8, 0, 0, 0,1, "Enhanced piercing capabilities."),
+                new ShotgunShell("Flechette", "28", 110, 2.9, 8, 0, 0, 0,1, "Small flechettes with high penetration."),
+                new ShotgunShell("Flechette", ".410", 115, 3.0, 8, 0, 0, 0,0, "Compact flechette rounds."),
 
-                new ShotgunShell("Beanbag", "10", 50, 1.0, 3, 0, 0,3, "Non-lethal beanbag rounds."),
-                new ShotgunShell("Beanbag", "12", 55, 1.1, 4, 0, 0,2, "Causes concussive impact."),
-                new ShotgunShell("Beanbag", "16", 60, 1.2, 5, 0, 0,1, "Minimal penetration, maximum blunt force."),
-                new ShotgunShell("Beanbag", "20", 65, 1.3, 6, 0, 0,1, "Non-lethal and effective."),
-                new ShotgunShell("Beanbag", "28", 70, 1.4, 7, 0, 0,1, "High-impact non-lethal rounds."),
-                new ShotgunShell("Beanbag", ".410", 75, 1.5, 8, 0, 0,0, "Small caliber non-lethal ammo."),
+                new ShotgunShell("Beanbag", "10", 50, 1.0, 8, 0, 0, 0,3, "Non-lethal beanbag rounds."),
+                new ShotgunShell("Beanbag", "12", 55, 1.1, 8, 0, 0, 0,2, "Causes concussive impact."),
+                new ShotgunShell("Beanbag", "16", 60, 1.2, 8, 0, 0, 0,1, "Minimal penetration, maximum blunt force."),
+                new ShotgunShell("Beanbag", "20", 65, 1.3, 8, 0, 0, 0,1, "Non-lethal and effective."),
+                new ShotgunShell("Beanbag", "28", 70, 1.4, 8, 0, 0, 0,1, "High-impact non-lethal rounds."),
+                new ShotgunShell("Beanbag", ".410", 75, 1.5, 6, 0, 0, 0,0, "Small caliber non-lethal ammo."),
 
-                new ShotgunShell("Slug", "10", 120, 3.0, 12, 0, 0,3, "Heavy slugs for maximum damage."),
-                new ShotgunShell("Slug", "12", 125, 3.1, 26, 0, 0,2, "Standard slug rounds."),
-                new ShotgunShell("Slug", "16", 130, 3.2, 27, 0, 0,1, "High-penetration slugs."),
-                new ShotgunShell("Slug", "20", 135, 3.3, 28, 0, 0,1, "Enhanced accuracy slugs."),
-                new ShotgunShell("Slug", "28", 140, 3.4, 29, 0, 0,1, "Small, precise slugs."),
-                new ShotgunShell("Slug", ".410", 145, 3.5, 30, 0, 0,0, "Compact slugs for light rifles.")
+                new ShotgunShell("Slug", "10", 120, 3.0, 12, 0, 0, 0,3, "Heavy slugs for maximum damage."),
+                new ShotgunShell("Slug", "12", 125, 3.1, 12, 0, 0, 0,2, "Standard slug rounds."),
+                new ShotgunShell("Slug", "16", 130, 3.2, 12, 0, 0, 0,1, "High-penetration slugs."),
+                new ShotgunShell("Slug", "20", 135, 3.3, 12, 0, 0, 0,1, "Enhanced accuracy slugs."),
+                new ShotgunShell("Slug", "28", 140, 3.4, 12, 0, 0, 0,1, "Small, precise slugs."),
+                new ShotgunShell("Slug", ".410", 145, 3.5, 10, 0, 0, 0,0, "Compact slugs for light rifles.")
             };
         }
 
@@ -226,11 +227,11 @@ namespace GunBuilder
             BarrelTypeList = new List<BarrelType>
             {
                 //              Name     PriceMod  WeightMod  DamageMod  HideMod  ACMod  Note
-                new BarrelType("Normal", 0, 0, 0, 0, 0, "Standard barrel with no modifications."),
-                new BarrelType("Heavy Barrel", 0.10, 0.02, 0, 0, 0, "Increases durability and heat dissipation."),
-                new BarrelType("Fluted", 0.15, 0.015, 0, 0, 0, "Reduces weight while maintaining strength."),
-                new BarrelType("Choked", 0.20, 0.025, 0, 0, 0, "Improves shot pattern for tighter spread."),
-                new BarrelType("Light", -0.05, -0.01, 0, 0, 0, "Enhances maneuverability by reducing weight.")
+                new BarrelType("Normal", 0, 0, 0, 0, 0, 0, "Standard barrel with no modifications."),
+                new BarrelType("Heavy Barrel", 0.10, 0.02, 0, 0, 0, 0, "Increases durability and heat dissipation."),
+                new BarrelType("Fluted", 0.15, 0.015, 0, 0, 0, 0, "Reduces weight while maintaining strength."),
+                new BarrelType("Choked", 0.20, 0.025, 0, 0, 0, 0, "Improves shot pattern for tighter spread."),
+                new BarrelType("Light", -0.05, -0.01, 0, 0, 0, 0, "Enhances maneuverability by reducing weight.")
             };
         }
 
@@ -242,12 +243,12 @@ namespace GunBuilder
             StockList = new List<Stock>
             {
                 //              Name     PriceMod  WeightMod  DamageMod  HideMod  ACMod  Note
-                new Stock("Standard", 0, 0, 0, 0, 0, "Standard stock with no modifications."),
-                new Stock("Wireframe", 0.05, -0.005, 0, 0, 0, "Reduces weight with a wireframe design."),
-                new Stock("Thumbhole", 0.075, 0.002, 0, 0, 0, "Improves handling and control."),
-                new Stock("Skeleton", 0.10, -0.007, 0, 0, 0, "Significantly reduces weight with a skeletal structure."),
-                new Stock("Collapsible", 0.125, 0.003, 0, 0, 0, "Allows for compact storage and adjustable length."),
-                new Stock("Pistol Grip", 0.15, 0.005, 0, 0, 0, "Improves handling and control.")
+                new Stock("Standard", 0, 0, 0, 0, 0, 0, "Standard stock with no modifications."),
+                new Stock("Wireframe", 0.05, -0.005, 0, 0, 0, 0, "Reduces weight with a wireframe design."),
+                new Stock("Thumbhole", 0.075, 0.002, 0, 0, 0, 0, "Improves handling and control."),
+                new Stock("Skeleton", 0.10, -0.007, 0, 0, 0, 0, "Significantly reduces weight with a skeletal structure."),
+                new Stock("Collapsible", 0.125, 0.003, 0, 0, 0, 0, "Allows for compact storage and adjustable length."),
+                new Stock("Pistol Grip", 0.15, 0.005, 0, 0, 0, 0, "Improves handling and control.")
             };
         }
 
@@ -258,16 +259,16 @@ namespace GunBuilder
         {
             AttachmentList = new List<Attachment>
             {
-                new Attachment("Scope", 0.10, 0.05, 0, 0, 2, "Enhances aiming accuracy."),
-                new Attachment("Laser Module", 0.08, 0.03, 0, 0, 1, "Improves target acquisition."),
-                new Attachment("Flashlight", 0.05, 0.02, 0, 0, 0, "Increases visibility in low-light conditions."),
-                new Attachment("Underbarrel Grenade Launcher", 0.50, 0.20, 10, 0, 0, "Adds explosive capabilities."),
-                new Attachment("Bipod", 0.25, 0.07, 0, 0, 0, "Stabilizes the weapon for precise shooting."),
-                new Attachment("Foregrip", 0.17, 0.05, 0, 0, 0, "Improves weapon handling and reduces recoil."),
-                new Attachment("Suppressor", 0.30, 0.04, 0, 0, 0, "Reduces noise and muzzle flash."),
-                new Attachment("Muzzle Brake", 0.20, 0.03, 0, 0, 0, "Reduces recoil by diverting gases."),
-                new Attachment("Compensator", 0.22, 0.03, 0, 0, 0, "Improves recoil control."),
-                new Attachment("Bayonet", 0.18, 0.06, 5, 0, 0, "Adds melee capability.")
+                new Attachment("Scope", 0.10, 0.05, 0, 0, 0, 2, "Enhances aiming accuracy."),
+                new Attachment("Laser Module", 0.08, 0.03, 0, 0, 0, 1, "Improves target acquisition."),
+                new Attachment("Flashlight", 0.05, 0.02, 0, 0, 0, 0, "Increases visibility in low-light conditions."),
+                new Attachment("Underbarrel Grenade Launcher", 0.50, 0.20, 10, 0, 0, 0, "Adds explosive capabilities."),
+                new Attachment("Bipod", 0.25, 0.07, 0, 0, 0, 0, "Stabilizes the weapon for precise shooting."),
+                new Attachment("Foregrip", 0.17, 0.05, 0, 0, 0, 0, "Improves weapon handling and reduces recoil."),
+                new Attachment("Suppressor", 0.30, 0.04, 0, 0, 0, 0, "Reduces noise and muzzle flash."),
+                new Attachment("Muzzle Brake", 0.20, 0.03, 0, 0, 0, 0, "Reduces recoil by diverting gases."),
+                new Attachment("Compensator", 0.22, 0.03, 0, 0, 0, 0, "Improves recoil control."),
+                new Attachment("Bayonet", 0.18, 0.06, 5, 0, 0, 0, "Adds melee capability.")
             };
         }
 
@@ -1089,7 +1090,16 @@ namespace GunBuilder
                     totalDamageMod += roundsizeDiceModifier;
                     debugInfo.AppendLine($"Total Damage Modifier after Roundsize: {totalDamageMod}");
 
+                    // Check if there's an extra dice modifier for the selected ammo
+                    if (SelectedAmmo != null && SelectedAmmo.ExtraDice > 0)
+                    {
+                        totalDamageMod += SelectedAmmo.ExtraDice; // Add extra dice modifier
+                        debugInfo.AppendLine($"Extra Dice Modifier for {SelectedAmmo.Name}: {SelectedAmmo.ExtraDice}");
+                    }
+
+                    // Set ammo damage per die if the selected ammo has a DamageMod
                     ammoDamagePerDie = SelectedAmmo != null ? SelectedAmmo.DamageMod : 0;
+
                     // Halve and round up the total damage
                     totalDamageMod = (int)Math.Ceiling(totalDamageMod / 2.0);
                     debugInfo.AppendLine($"Total Damage Modifier after Halving and Rounding Up: {totalDamageMod}");
