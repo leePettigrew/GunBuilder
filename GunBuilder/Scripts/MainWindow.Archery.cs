@@ -307,6 +307,7 @@ namespace GunBuilder
                 specialNotes.AppendLine($"- Shot durability is modified by {shotDurabilityMod} due to material.");
                 specialNotes.AppendLine($"- Damage is modified by {damageMod} due to material.");
                 specialNotes.AppendLine($"- {SelectedArrow.Note}");
+                specialNotes.AppendLine($"- {SelectedBow.Note}");
                 specialNotes.AppendLine("----------------------------");
 
                 // Compile Debug Information Section
