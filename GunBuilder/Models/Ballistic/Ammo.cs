@@ -1,5 +1,5 @@
 ﻿// Models/Ammo.cs
-namespace GunBuilder.Models
+namespace GunBuilder.Models.Ballistic
 {
     /// <summary>
     /// Represents ammunition for Pistol and Rifle types.

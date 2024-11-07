@@ -1,5 +1,5 @@
 ﻿// Models/Stock.cs
-namespace GunBuilder.Models
+namespace GunBuilder.Models.Ballistic
 {
     /// <summary>
     /// Represents the type of stock.

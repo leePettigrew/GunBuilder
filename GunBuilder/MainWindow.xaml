@@ -2,10 +2,10 @@
 <Window x:Class="GunBuilder.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:local="clr-namespace:GunBuilder"
         Title="Gun Builder" Height="800" Width="1000"
         WindowStartupLocation="CenterScreen"
-        Background="#2D2D30">
+        Background="{StaticResource BackgroundBrush}"
+        ResizeMode="CanResizeWithGrip">
 
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <Grid Margin="20">
@@ -13,404 +13,500 @@
                 <RowDefinition Height="Auto"/>
                 <!-- Title -->
                 <RowDefinition Height="*"/>
-                <!-- Selection Panel -->
+                <!-- Content -->
                 <RowDefinition Height="Auto"/>
-                <!-- Output Panel -->
+                <!-- Output -->
             </Grid.RowDefinitions>
 
             <!-- Title -->
             <TextBlock Text="Weapon Builder" 
-                       Style="{StaticResource TitleTextBlock}"
-                       ToolTip="Build your custom weapon here."
-                       Grid.Row="0"/>
+                       FontSize="32" 
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,20"
+                       Grid.Row="0"
+                       ToolTip="Build your custom weapon here."/>
 
-            <!-- Selection Panel within a Rounded Border -->
-            <Border Grid.Row="1" Style="{StaticResource RoundedBorder}">
-                <StackPanel Orientation="Vertical">
+            <!-- Main Selection Panel with Tabs -->
+            <TabControl Grid.Row="1">
 
-                    <!-- Weapon Type Selection -->
-                    <Grid Margin="0,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="150"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="Weapon Type:" 
-                                   Style="{StaticResource LabelTextBlock}"
-                                   VerticalAlignment="Center"/>
-                        <ComboBox x:Name="WeaponTypeComboBox" 
-                                  Style="{StaticResource CustomComboBox}"
-                                  Grid.Column="1"
-                                  SelectionChanged="WeaponTypeComboBox_SelectionChanged"
-                                  ToolTip="Select the type of weapon you want to build.">
-                            <ComboBoxItem Content="Ballistic" IsSelected="True"/>
-                            <ComboBoxItem Content="Energy"/>
-                        </ComboBox>
-                    </Grid>
+                <!-- Ballistic Tab -->
+                <TabItem Header="Ballistic">
+                    <Border CornerRadius="10" Padding="15" Margin="10">
+                        <StackPanel Orientation="Vertical">
 
-                    <!-- Ballistic Weapon Options -->
-                    <StackPanel x:Name="BallisticOptionsPanel" Visibility="Visible">
-                        <!-- Frame Selection -->
-                        <Grid Margin="0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Frame:" 
-                                       Style="{StaticResource LabelTextBlock}"
-                                       VerticalAlignment="Center"/>
-                            <ComboBox x:Name="FrameComboBox" 
-                                      Style="{StaticResource CustomComboBox}"
-                                      Grid.Column="1"
-                                      SelectionChanged="FrameComboBox_SelectionChanged"
-                                      ToolTip="Select the frame type of the weapon.">
-                                <ComboBoxItem Content="Pistol"/>
-                                <ComboBoxItem Content="Carbine"/>
-                                <ComboBoxItem Content="Rifle"/>
-                                <ComboBoxItem Content="Shotgun"/>
-                                <ComboBoxItem Content="DMR"/>
-                                <ComboBoxItem Content="SMG"/>
-                                <ComboBoxItem Content="LMG"/>
-                                <ComboBoxItem Content="Sniper"/>
-                            </ComboBox>
-                        </Grid>
+                            <!-- Weapon Type Selection -->
+                            <Grid Margin="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Weapon Type:" 
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center" />
+                                <ComboBox x:Name="WeaponTypeComboBox" 
+                                          Grid.Column="1"
+                                          SelectionChanged="WeaponTypeComboBox_SelectionChanged"
+                                          ToolTip="Select the type of weapon you want to build.">
+                                    <ComboBoxItem Content="Ballistic" IsSelected="True"/>
+                                    <ComboBoxItem Content="Energy"/>
+                                </ComboBox>
+                            </Grid>
 
-                        <!-- Action Selection -->
-                        <Grid Margin="0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Action:" 
-                                       Style="{StaticResource LabelTextBlock}"
-                                       VerticalAlignment="Center"/>
-                            <ComboBox x:Name="ActionComboBox" 
-                                      Style="{StaticResource CustomComboBox}"
-                                      Grid.Column="1"
-                                      SelectionChanged="ActionComboBox_SelectionChanged"
-                                      ToolTip="Select the action mechanism of the weapon.">
-                                <ComboBoxItem Content="Flintlock"/>
-                                <ComboBoxItem Content="Matchlock"/>
-                                <ComboBoxItem Content="Pump Action"/>
-                                <ComboBoxItem Content="Lever Action"/>
-                                <ComboBoxItem Content="Bolt Action"/>
-                                <ComboBoxItem Content="Break Action"/>
-                                <ComboBoxItem Content="Single Action"/>
-                                <ComboBoxItem Content="Double Action"/>
-                                <ComboBoxItem Content="Semi-Automatic"/>
-                                <ComboBoxItem Content="Burst"/>
-                                <ComboBoxItem Content="Automatic"/>
-                                <ComboBoxItem Content="Semi/Burst"/>
-                                <ComboBoxItem Content="Semi/Full"/>
-                                <ComboBoxItem Content="Semi/Burst/Full"/>
-                            </ComboBox>
-                        </Grid>
+                            <!-- Ballistic Weapon Options -->
+                            <StackPanel x:Name="BallisticOptionsPanel" Visibility="Visible">
 
-                        <!-- Magazine Style Selection -->
-                        <Grid Margin="0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Magazine Style:" 
-                                       Style="{StaticResource LabelTextBlock}"
-                                       VerticalAlignment="Center"/>
-                            <ComboBox x:Name="MagazineStyleComboBox" 
-                                      Style="{StaticResource CustomComboBox}"
-                                      Grid.Column="1"
-                                      SelectionChanged="MagazineStyleComboBox_SelectionChanged"
-                                      ToolTip="Select the magazine style of the weapon.">
-                                <ComboBoxItem Content="Muzzle Loader"/>
-                                <ComboBoxItem Content="Breachloader"/>
-                                <ComboBoxItem Content="Tube-fed"/>
-                                <ComboBoxItem Content="Cylinder"/>
-                                <ComboBoxItem Content="Clip"/>
-                                <ComboBoxItem Content="En Bloc Clip"/>
-                                <ComboBoxItem Content="Box Magazine"/>
-                                <ComboBoxItem Content="Drum Magazine"/>
-                                <ComboBoxItem Content="Detachable Magazine"/>
-                                <ComboBoxItem Content="Belt-fed"/>
-                                <ComboBoxItem Content="Integrated Drum"/>
-                            </ComboBox>
-                        </Grid>
-
-                        <!-- Ammo Selection -->
-                        <Grid Margin="0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Ammo:" 
-                                       Style="{StaticResource LabelTextBlock}"
-                                       VerticalAlignment="Top"/>
-                            <StackPanel Grid.Column="1">
-                                <!-- Pistol Caliber -->
-                                <Grid x:Name="PistolAmmoGrid" Margin="0,5,0,10" Visibility="Collapsed">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
+                                <!-- Frame Selection -->
+                                <Grid Margin="0,10">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="200"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Text="Pistol Cal:" 
-                                               Foreground="White" 
+                                    <TextBlock Text="Frame:" 
                                                FontWeight="Bold"
-                                               VerticalAlignment="Center"/>
-                                    <ListBox x:Name="PistolAmmoListBox" 
-                                             Style="{StaticResource CustomListBox}" 
-                                             SelectionMode="Single"
+                                               VerticalAlignment="Center" />
+                                    <ComboBox x:Name="FrameComboBox" 
+                                              Grid.Column="1"
+                                              SelectionChanged="FrameComboBox_SelectionChanged"
+                                              ToolTip="Select the frame type of the weapon.">
+                                        <ComboBoxItem Content="Pistol"/>
+                                        <ComboBoxItem Content="Carbine"/>
+                                        <ComboBoxItem Content="Rifle"/>
+                                        <ComboBoxItem Content="Shotgun"/>
+                                        <ComboBoxItem Content="DMR"/>
+                                        <ComboBoxItem Content="SMG"/>
+                                        <ComboBoxItem Content="LMG"/>
+                                        <ComboBoxItem Content="Sniper"/>
+                                    </ComboBox>
+                                </Grid>
+
+                                <!-- Action Selection -->
+                                <Grid Margin="0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Action:" 
+                                               FontWeight="Bold"
+                                               VerticalAlignment="Center" />
+                                    <ComboBox x:Name="ActionComboBox" 
+                                              Grid.Column="1"
+                                              SelectionChanged="ActionComboBox_SelectionChanged"
+                                              ToolTip="Select the action mechanism of the weapon.">
+                                        <ComboBoxItem Content="Flintlock"/>
+                                        <ComboBoxItem Content="Matchlock"/>
+                                        <ComboBoxItem Content="Pump Action"/>
+                                        <ComboBoxItem Content="Lever Action"/>
+                                        <ComboBoxItem Content="Bolt Action"/>
+                                        <ComboBoxItem Content="Break Action"/>
+                                        <ComboBoxItem Content="Single Action"/>
+                                        <ComboBoxItem Content="Double Action"/>
+                                        <ComboBoxItem Content="Semi-Automatic"/>
+                                        <ComboBoxItem Content="Burst"/>
+                                        <ComboBoxItem Content="Automatic"/>
+                                        <ComboBoxItem Content="Semi/Burst"/>
+                                        <ComboBoxItem Content="Semi/Full"/>
+                                        <ComboBoxItem Content="Semi/Burst/Full"/>
+                                    </ComboBox>
+                                </Grid>
+
+                                <!-- Magazine Style Selection -->
+                                <Grid Margin="0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Magazine Style:" 
+                                               FontWeight="Bold"
+                                               VerticalAlignment="Center" />
+                                    <ComboBox x:Name="MagazineStyleComboBox" 
+                                              Grid.Column="1"
+                                              SelectionChanged="MagazineStyleComboBox_SelectionChanged"
+                                              ToolTip="Select the magazine style of the weapon.">
+                                        <ComboBoxItem Content="Muzzle Loader"/>
+                                        <ComboBoxItem Content="Breachloader"/>
+                                        <ComboBoxItem Content="Tube-fed"/>
+                                        <ComboBoxItem Content="Cylinder"/>
+                                        <ComboBoxItem Content="Clip"/>
+                                        <ComboBoxItem Content="En Bloc Clip"/>
+                                        <ComboBoxItem Content="Box Magazine"/>
+                                        <ComboBoxItem Content="Drum Magazine"/>
+                                        <ComboBoxItem Content="Detachable Magazine"/>
+                                        <ComboBoxItem Content="Belt-fed"/>
+                                        <ComboBoxItem Content="Integrated Drum"/>
+                                    </ComboBox>
+                                </Grid>
+
+                                <!-- Ammo Selection -->
+                                <Grid Margin="0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Ammo:" 
+                                               FontWeight="Bold"
+                                               VerticalAlignment="Top"/>
+                                    <StackPanel Grid.Column="1">
+                                        <!-- Pistol Caliber -->
+                                        <Grid x:Name="PistolAmmoGrid" Margin="0,5,0,10" Visibility="Collapsed">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="120"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Pistol Cal:" 
+                                                       FontWeight="Bold"
+                                                       VerticalAlignment="Center"
+                                                       Grid.Row="0"
+                                                       Grid.Column="0"/>
+                                            <ListBox x:Name="PistolAmmoListBox" 
+                                                     Grid.Row="0" Grid.Column="1"
+                                                     SelectionMode="Single"
+                                                     SelectionChanged="PistolAmmoListBox_SelectionChanged"
+                                                     ToolTip="Select the pistol caliber ammo.">
+                                                <ListBoxItem Content="9x19mm Parabellum"/>
+                                                <ListBoxItem Content=".45 ACP"/>
+                                                <ListBoxItem Content=".40 S and W"/>
+                                                <ListBoxItem Content=".380 ACP"/>
+                                                <ListBoxItem Content=".357 Magnum"/>
+                                                <ListBoxItem Content=".38 Special"/>
+                                                <ListBoxItem Content=".22 LR"/>
+                                                <ListBoxItem Content=".44 Magnum"/>
+                                                <ListBoxItem Content=".50 Action Express"/>
+                                                <ListBoxItem Content=".500 Linebaugh"/>
+                                                <ListBoxItem Content="Musket Balls"/>
+                                            </ListBox>
+                                        </Grid>
+
+                                        <!-- Rifle Caliber -->
+                                        <Grid x:Name="RifleAmmoGrid" Margin="0,5,0,10" Visibility="Collapsed">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="120"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <TextBlock Text="Rifle Cal:" 
+                                                       FontWeight="Bold"
+                                                       VerticalAlignment="Center"
+                                                       Grid.Row="0"
+                                                       Grid.Column="0"/>
+                                            <ListBox x:Name="RifleAmmoListBox" 
+                                                     Grid.Row="0" Grid.Column="1"
+                                                     SelectionMode="Single"
+                                                     SelectionChanged="RifleAmmoListBox_SelectionChanged"
+                                                     ToolTip="Select the rifle caliber ammo.">
+                                                <ListBoxItem Content="5.56x45mm NATO"/>
+                                                <ListBoxItem Content="7.62x39mm"/>
+                                                <ListBoxItem Content="7.62x51mm NATO (.308 Winchester)"/>
+                                                <ListBoxItem Content=".223 Remington"/>
+                                                <ListBoxItem Content=".30-06 Springfield"/>
+                                                <ListBoxItem Content=".300 Winchester Magnum"/>
+                                                <ListBoxItem Content=".30-30 Winchester"/>
+                                                <ListBoxItem Content=".45-70 Government"/>
+                                                <ListBoxItem Content="6.5mm Creedmoor"/>
+                                                <ListBoxItem Content=".50 BMG"/>
+                                                <ListBoxItem Content="7.62x54mm"/>
+                                                <ListBoxItem Content=".338 Magnum"/>
+                                                <ListBoxItem Content="4.73x33mm Caseless"/>
+                                                <ListBoxItem Content="14.5x114mm"/>
+                                            </ListBox>
+                                        </Grid>
+
+                                        <!-- Shotgun Shell Selection -->
+                                        <Grid x:Name="ShotgunShellGrid" Margin="0,5,0,10" Visibility="Collapsed">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="120"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <!-- Shotgun Shell Type -->
+                                            <TextBlock Text="Shotgun Shell:" 
+                                                       FontWeight="Bold"
+                                                       VerticalAlignment="Center"
+                                                       Grid.Row="0"
+                                                       Grid.Column="0"/>
+                                            <ComboBox x:Name="ShotgunShellTypeComboBox" 
+                                                      Grid.Row="0" Grid.Column="1"
+                                                      SelectionChanged="ShotgunShellTypeComboBox_SelectionChanged"
+                                                      ToolTip="Select the shotgun shell type.">
+                                                <ComboBoxItem Content="Birdshot"/>
+                                                <ComboBoxItem Content="Buckshot"/>
+                                                <ComboBoxItem Content="Dragonsbreath"/>
+                                                <ComboBoxItem Content="Flechette"/>
+                                                <ComboBoxItem Content="Beanbag"/>
+                                                <ComboBoxItem Content="Slug"/>
+                                            </ComboBox>
+
+                                            <!-- Shotgun Shell Gauge -->
+                                            <TextBlock Text="Gauge:" 
+                                                       FontWeight="Bold"
+                                                       VerticalAlignment="Center"
+                                                       Grid.Row="1"
+                                                       Grid.Column="0"/>
+                                            <ComboBox x:Name="ShotgunShellGaugeComboBox" 
+                                                      Grid.Row="1" Grid.Column="1"
+                                                      SelectionChanged="ShotgunShellGaugeComboBox_SelectionChanged"
+                                                      ToolTip="Select the gauge of the shotgun shell.">
+                                                <ComboBoxItem Content="10"/>
+                                                <ComboBoxItem Content="12"/>
+                                                <ComboBoxItem Content="16"/>
+                                                <ComboBoxItem Content="20"/>
+                                                <ComboBoxItem Content="28"/>
+                                                <ComboBoxItem Content=".410"/>
+                                            </ComboBox>
+                                        </Grid>
+                                    </StackPanel>
+                                </Grid>
+
+                                <!-- Barrel Type Selection -->
+                                <Grid Margin="0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Barrel Type:" 
+                                               FontWeight="Bold"
+                                               VerticalAlignment="Center" />
+                                    <ComboBox x:Name="BarrelTypeComboBox" 
+                                              Grid.Column="1"
+                                              SelectionChanged="BarrelTypeComboBox_SelectionChanged"
+                                              ToolTip="Select the barrel type of the weapon.">
+                                        <ComboBoxItem Content="Normal"/>
+                                        <ComboBoxItem Content="Heavy Barrel"/>
+                                        <ComboBoxItem Content="Fluted"/>
+                                        <ComboBoxItem Content="Choked"/>
+                                        <ComboBoxItem Content="Light"/>
+                                    </ComboBox>
+                                </Grid>
+
+                                <!-- Rifling Selection -->
+                                <Grid Margin="0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Rifling:" 
+                                               FontWeight="Bold"
+                                               VerticalAlignment="Center" />
+                                    <ComboBox x:Name="RiflingComboBox" 
+                                              Grid.Column="1"
+                                              SelectionChanged="RiflingComboBox_SelectionChanged"
+                                              ToolTip="Select the rifling type of the barrel.">
+                                        <ComboBoxItem Content="Smooth Bore"/>
+                                        <ComboBoxItem Content="Rifled"/>
+                                    </ComboBox>
+                                </Grid>
+
+                                <!-- Attachment System -->
+                                <Grid Margin="0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Attachments:" 
+                                               FontWeight="Bold"
+                                               VerticalAlignment="Top"/>
+                                    <ListBox x:Name="AttachmentsListBox" 
                                              Grid.Column="1"
-                                             SelectionChanged="PistolAmmoListBox_SelectionChanged"
-                                             ToolTip="Select the pistol caliber ammo.">
-                                        <!-- Pistol Ammo Items -->
-                                        <ListBoxItem Content="9x19mm Parabellum"/>
-                                        <ListBoxItem Content=".45 ACP"/>
-                                        <ListBoxItem Content=".40 S and W"/>
-                                        <ListBoxItem Content=".380 ACP"/>
-                                        <ListBoxItem Content=".357 Magnum"/>
-                                        <ListBoxItem Content=".38 Special"/>
-                                        <ListBoxItem Content=".22 LR"/>
-                                        <ListBoxItem Content=".44 Magnum"/>
-                                        <ListBoxItem Content=".50 Action Express"/>
-                                        <ListBoxItem Content=".500 Linebaugh"/>
-                                        <ListBoxItem Content="Musket Balls"/>
+                                             SelectionMode="Multiple" 
+                                             SelectionChanged="AttachmentsListBox_SelectionChanged"
+                                             ToolTip="Select the attachments for your weapon.">
+                                        <ListBoxItem Content="Scope"/>
+                                        <ListBoxItem Content="Laser Module"/>
+                                        <ListBoxItem Content="Flashlight"/>
+                                        <ListBoxItem Content="Underbarrel Grenade Launcher"/>
+                                        <ListBoxItem Content="Bipod"/>
+                                        <ListBoxItem Content="Foregrip"/>
+                                        <ListBoxItem Content="Suppressor"/>
+                                        <ListBoxItem Content="Muzzle Brake"/>
+                                        <ListBoxItem Content="Compensator"/>
+                                        <ListBoxItem Content="Bayonet"/>
                                     </ListBox>
                                 </Grid>
 
-                                <!-- Rifle Caliber -->
-                                <Grid x:Name="RifleAmmoGrid" Margin="0,5,0,10" Visibility="Collapsed">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
+                                <!-- Stock Selection -->
+                                <Grid Margin="0,10">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
+                                        <ColumnDefinition Width="200"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Text="Rifle Cal:" 
-                                               Foreground="White" 
+                                    <TextBlock Text="Stock:" 
                                                FontWeight="Bold"
-                                               VerticalAlignment="Center"/>
-                                    <ListBox x:Name="RifleAmmoListBox" 
-                                             Style="{StaticResource CustomListBox}" 
-                                             SelectionMode="Single"
+                                               VerticalAlignment="Center" />
+                                    <ComboBox x:Name="StockComboBox" 
+                                              Grid.Column="1"
+                                              SelectionChanged="StockComboBox_SelectionChanged"
+                                              ToolTip="Select the stock type of the weapon.">
+                                        <ComboBoxItem Content="Standard"/>
+                                        <ComboBoxItem Content="Wireframe"/>
+                                        <ComboBoxItem Content="Thumbhole"/>
+                                        <ComboBoxItem Content="Skeleton"/>
+                                        <ComboBoxItem Content="Collapsible"/>
+                                        <ComboBoxItem Content="Pistol Grip"/>
+                                    </ComboBox>
+                                </Grid>
+
+                                <!-- Barrel Length Input -->
+                                <Grid Margin="0,10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="200"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="Barrel Length (cm):" 
+                                               FontWeight="Bold"
+                                               VerticalAlignment="Center" />
+                                    <TextBox x:Name="BarrelLengthTextBox" 
                                              Grid.Column="1"
-                                             SelectionChanged="RifleAmmoListBox_SelectionChanged"
-                                             ToolTip="Select the rifle caliber ammo.">
-                                        <!-- Rifle Ammo Items -->
-                                        <ListBoxItem Content="5.56x45mm NATO"/>
-                                        <ListBoxItem Content="7.62x39mm"/>
-                                        <ListBoxItem Content="7.62x51mm NATO (.308 Winchester)"/>
-                                        <ListBoxItem Content=".223 Remington"/>
-                                        <ListBoxItem Content=".30-06 Springfield"/>
-                                        <ListBoxItem Content=".300 Winchester Magnum"/>
-                                        <ListBoxItem Content=".30-30 Winchester"/>
-                                        <ListBoxItem Content=".45-70 Government"/>
-                                        <ListBoxItem Content="6.5mm Creedmoor"/>
-                                        <ListBoxItem Content=".50 BMG"/>
-                                        <ListBoxItem Content="7.62x54mm"/>
-                                        <ListBoxItem Content=".338 Magnum"/>
-                                        <ListBoxItem Content="4.73x33mm Caseless"/>
-                                        <ListBoxItem Content="14.5x114mm"/>
-                                    </ListBox>
+                                             PreviewTextInput="NumberValidationTextBox"
+                                             TextChanged="BarrelLengthTextBox_TextChanged"
+                                             ToolTip="Enter the barrel length in inches."/>
                                 </Grid>
 
-                                <!-- Shotgun Shell Selection -->
-                                <Grid x:Name="ShotgunShellGrid" Margin="0,5,0,10" Visibility="Collapsed">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="120"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-
-                                    <!-- Shotgun Shell Type -->
-                                    <TextBlock Text="Shotgun Shell:" 
-                                               Foreground="White" 
-                                               FontWeight="Bold"
-                                               VerticalAlignment="Center"
-                                               Grid.Row="0"
-                                               Grid.Column="0"/>
-                                    <ComboBox x:Name="ShotgunShellTypeComboBox" 
-                                              Style="{StaticResource CustomComboBox}" 
-                                              Grid.Row="0" Grid.Column="1"
-                                              SelectionChanged="ShotgunShellTypeComboBox_SelectionChanged"
-                                              ToolTip="Select the shotgun shell type.">
-                                        <ComboBoxItem Content="Birdshot"/>
-                                        <ComboBoxItem Content="Buckshot"/>
-                                        <ComboBoxItem Content="Dragonsbreath"/>
-                                        <ComboBoxItem Content="Flechette"/>
-                                        <ComboBoxItem Content="Beanbag"/>
-                                        <ComboBoxItem Content="Slug"/>
-                                    </ComboBox>
-
-                                    <!-- Shotgun Shell Gauge -->
-                                    <TextBlock Text="Gauge:" 
-                                               Foreground="White" 
-                                               FontWeight="Bold"
-                                               VerticalAlignment="Center"
-                                               Grid.Row="1"
-                                               Grid.Column="0"/>
-                                    <ComboBox x:Name="ShotgunShellGaugeComboBox" 
-                                              Style="{StaticResource CustomComboBox}" 
-                                              Grid.Row="1" Grid.Column="1"
-                                              SelectionChanged="ShotgunShellGaugeComboBox_SelectionChanged"
-                                              ToolTip="Select the gauge of the shotgun shell.">
-                                        <ComboBoxItem Content="10"/>
-                                        <ComboBoxItem Content="12"/>
-                                        <ComboBoxItem Content="16"/>
-                                        <ComboBoxItem Content="20"/>
-                                        <ComboBoxItem Content="28"/>
-                                        <ComboBoxItem Content=".410"/>
-                                    </ComboBox>
-                                </Grid>
                             </StackPanel>
-                        </Grid>
 
-                        <!-- Barrel Type Selection -->
-                        <Grid Margin="0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Barrel Type:" 
-                                       Style="{StaticResource LabelTextBlock}"
-                                       VerticalAlignment="Center"/>
-                            <ComboBox x:Name="BarrelTypeComboBox" 
-                                      Style="{StaticResource CustomComboBox}"
-                                      Grid.Column="1"
-                                      SelectionChanged="BarrelTypeComboBox_SelectionChanged"
-                                      ToolTip="Select the barrel type of the weapon.">
-                                <ComboBoxItem Content="Normal"/>
-                                <ComboBoxItem Content="Heavy Barrel"/>
-                                <ComboBoxItem Content="Fluted"/>
-                                <ComboBoxItem Content="Choked"/>
-                                <ComboBoxItem Content="Light"/>
-                            </ComboBox>
-                        </Grid>
+                            <!-- Placeholder for Energy Weapon Options -->
+                            <StackPanel x:Name="EnergyOptionsPanel" Visibility="Collapsed">
+                                <TextBlock Text="Energy Weapon Builder is under construction." 
+                                           FontSize="16" 
+                                           HorizontalAlignment="Center" 
+                                           Margin="0,20"
+                                           ToolTip="Energy weapon options are coming soon!"/>
+                            </StackPanel>
 
-                        <!-- Rifling Selection -->
-                        <Grid Margin="0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Rifling:" 
-                                       Style="{StaticResource LabelTextBlock}"
-                                       VerticalAlignment="Center"/>
-                            <ComboBox x:Name="RiflingComboBox" 
-                                      Style="{StaticResource CustomComboBox}"
-                                      Grid.Column="1"
-                                      SelectionChanged="RiflingComboBox_SelectionChanged"
-                                      ToolTip="Select the rifling type of the barrel.">
-                                <ComboBoxItem Content="Smooth Bore"/>
-                                <ComboBoxItem Content="Rifled"/>
-                            </ComboBox>
-                        </Grid>
+                            <!-- Generate Output Button -->
+                            <Button Content="Generate Output" 
+                                    Click="GenerateOutputButton_Click"
+                                    ToolTip="Click to generate the weapon configuration output."
+                                    Width="200"
+                                    Height="30"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,20,0,20"/>
+                        </StackPanel>
+                    </Border>
+                </TabItem>
 
-                        <!-- Attachment System -->
-                        <Grid Margin="0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Attachments:" 
-                                       Style="{StaticResource LabelTextBlock}"
-                                       VerticalAlignment="Top"/>
-                            <ListBox x:Name="AttachmentsListBox" 
-                                     Style="{StaticResource CustomListBox}" 
-                                     SelectionMode="Multiple" 
-                                     Grid.Column="1"
-                                     ToolTip="Select the attachments for your weapon.">
-                                <!-- Attachment Items -->
-                                <ListBoxItem Content="Scope"/>
-                                <ListBoxItem Content="Laser Module"/>
-                                <ListBoxItem Content="Flashlight"/>
-                                <ListBoxItem Content="Underbarrel Grenade Launcher"/>
-                                <ListBoxItem Content="Bipod"/>
-                                <ListBoxItem Content="Foregrip"/>
-                                <ListBoxItem Content="Suppressor"/>
-                                <ListBoxItem Content="Muzzle Brake"/>
-                                <ListBoxItem Content="Compensator"/>
-                                <ListBoxItem Content="Bayonet"/>
-                            </ListBox>
-                        </Grid>
+                <!-- Archery Tab -->
+                <TabItem Header="Archery">
+                    <Border CornerRadius="10" Padding="15" Margin="10">
+                        <StackPanel Orientation="Vertical">
 
-                        <!-- Stock Selection -->
-                        <Grid Margin="0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Stock:" 
-                                       Style="{StaticResource LabelTextBlock}"
-                                       VerticalAlignment="Center"/>
-                            <ComboBox x:Name="StockComboBox" 
-                                      Style="{StaticResource CustomComboBox}"
-                                      Grid.Column="1"
-                                      SelectionChanged="StockComboBox_SelectionChanged"
-                                      ToolTip="Select the stock type of the weapon.">
-                                <ComboBoxItem Content="Standard"/>
-                                <ComboBoxItem Content="Wireframe"/>
-                                <ComboBoxItem Content="Thumbhole"/>
-                                <ComboBoxItem Content="Skeleton"/>
-                                <ComboBoxItem Content="Collapsible"/>
-                                <ComboBoxItem Content="Pistol Grip"/>
-                            </ComboBox>
-                        </Grid>
+                            <!-- Bow Selection -->
+                            <Grid Margin="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="(May have to reselect) Bow:" 
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center" />
+                                <ComboBox x:Name="BowComboBox" 
+                                          Grid.Column="1"
+                                          SelectionChanged="BowComboBox_SelectionChanged"
+                                          ToolTip="Select the bow type.">
+                                    <!-- Bow items are populated dynamically in code-behind -->
+                                </ComboBox>
+                            </Grid>
 
-                        <!-- Barrel Length Input -->
-                        <Grid Margin="0,10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="150"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <TextBlock Text="Barrel Length (inches):" 
-                                       Style="{StaticResource LabelTextBlock}"
-                                       VerticalAlignment="Center"/>
-                            <TextBox x:Name="BarrelLengthTextBox" 
-                                     Style="{StaticResource CustomTextBox}"
-                                     Grid.Column="1"
-                                     PreviewTextInput="NumberValidationTextBox"
-                                     TextChanged="BarrelLengthTextBox_TextChanged"
-                                     ToolTip="Enter the barrel length in inches."/>
-                        </Grid>
-                    </StackPanel>
+                            <!-- Material Selection -->
+                            <Grid Margin="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Material:" 
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center" />
+                                <ComboBox x:Name="MaterialComboBox" 
+                                          Grid.Column="1"
+                                          SelectionChanged="MaterialComboBox_SelectionChanged"
+                                          ToolTip="Select the bow material.">
+                                    <!-- Material items are populated dynamically in code-behind -->
+                                </ComboBox>
+                            </Grid>
 
-                    <!-- Placeholder for Energy Weapon Options -->
-                    <StackPanel x:Name="EnergyOptionsPanel" Visibility="Collapsed">
-                        <!-- Implement Energy Weapon Options Here -->
-                        <TextBlock Text="Energy Weapon Builder is under construction." 
-                                   Foreground="White" 
-                                   FontSize="16" 
-                                   HorizontalAlignment="Center" 
-                                   Margin="0,20"
-                                   ToolTip="Energy weapon options are coming soon!"/>
-                    </StackPanel>
+                            <!-- Draw Weight Input -->
+                            <Grid Margin="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Draw Weight (kg):" 
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center" />
+                                <TextBox x:Name="DrawWeightTextBox" 
+                                         Grid.Column="1"
+                                         PreviewTextInput="NumberValidationTextBox"
+                                         TextChanged="DrawWeightTextBox_TextChanged"
+                                         ToolTip="Enter the draw weight in kg."/>
+                            </Grid>
 
-                    <!-- Generate Output Button -->
-                    <Button Content="Generate Output" 
-                            Style="{StaticResource CustomButton}"
-                            Click="GenerateOutputButton_Click"
-                            HorizontalAlignment="Center"
-                            Margin="0,20,0,0"
-                            ToolTip="Click to generate the weapon configuration output."/>
-                </StackPanel>
-            </Border>
+                            <!-- Length Input -->
+                            <Grid Margin="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Bow Length (cm):" 
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center" />
+                                <TextBox x:Name="BowLengthTextBox" 
+                                         Grid.Column="1"
+                                         PreviewTextInput="NumberValidationTextBox"
+                                         ToolTip="Enter the bow length in cm."/>
+                            </Grid>
 
-            <!-- Output Panel within a Rounded Border -->
-            <Border Grid.Row="2" Style="{StaticResource RoundedBorder}" Margin="0,20,0,0">
+
+                            <!-- Arrow Selection -->
+                            <Grid Margin="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="Arrow:" 
+                                           FontWeight="Bold"
+                                           VerticalAlignment="Center" />
+                                <ComboBox x:Name="ArrowComboBox" 
+                                          Grid.Column="1"
+                                          SelectionChanged="ArrowComboBox_SelectionChanged"
+                                          ToolTip="Select the arrow type.">
+                                    <!-- Arrow items are populated dynamically in code-behind -->
+                                </ComboBox>
+                            </Grid>
+
+                            <!-- Generate Archery Output Button -->
+                            <Button Content="Generate Archery Output" 
+                                    Click="GenerateArcheryOutputButton_Click"
+                                    ToolTip="Click to generate the archery configuration output."
+                                    Width="250"
+                                    Height="30"
+                                    HorizontalAlignment="Center"
+                                    Margin="0,20,0,20"/>
+                        </StackPanel>
+                    </Border>
+                </TabItem>
+            </TabControl>
+
+            <!-- Output Panel -->
+            <Border Grid.Row="2" Background="{StaticResource ControlBackgroundBrush}" CornerRadius="10" Padding="15" Margin="10">
                 <StackPanel Orientation="Vertical">
                     <TextBlock Text="Output:" 
-                               Style="{StaticResource OutputTextBlock}"/>
+                               FontSize="18" 
+                               FontWeight="Bold"
+                               Margin="0,0,0,10"
+                               ToolTip="Generated weapon configuration will appear here."/>
                     <TextBox x:Name="OutputTextBox" 
-                             Style="{StaticResource ReadOnlyTextBox}"
-                             TextWrapping="Wrap" 
-                             IsReadOnly="True" 
-                             VerticalScrollBarVisibility="Auto"
+                             Style="{StaticResource OutputTextBoxStyle}"
+                             Height="300"
                              ToolTip="Generated weapon configuration will appear here."/>
                 </StackPanel>
             </Border>

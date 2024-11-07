@@ -1,5 +1,5 @@
 ﻿// Models/Attachment.cs
-namespace GunBuilder.Models
+namespace GunBuilder.Models.Ballistic
 {
     /// <summary>
     /// Represents weapon attachments with percentage-based modifiers.

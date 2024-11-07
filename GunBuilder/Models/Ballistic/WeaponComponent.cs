@@ -1,5 +1,5 @@
 ﻿// Models/WeaponComponent.cs
-namespace GunBuilder.Models
+namespace GunBuilder.Models.Ballistic
 {
     /// <summary>
     /// Base class for all weapon components.

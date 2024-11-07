@@ -1,5 +1,5 @@
 ﻿// Models/ShotgunShell.cs
-namespace GunBuilder.Models
+namespace GunBuilder.Models.Ballistic
 {
     /// <summary>
     /// Represents shotgun shells with different gauges and special properties.
@@ -9,7 +9,7 @@ namespace GunBuilder.Models
         public string Gauge { get; set; }
         public int GaugeDamageMod { get; set; }
 
-        public ShotgunShell(string name, string gauge, double priceMod, double weightMod, int damageMod, int extraDice, int hideMod, int acMod,int gaugeDamageMod, string note)
+        public ShotgunShell(string name, string gauge, double priceMod, double weightMod, int damageMod, int extraDice, int hideMod, int acMod, int gaugeDamageMod, string note)
             : base(name, priceMod, weightMod, damageMod, extraDice, hideMod, acMod, note)
         {
             Gauge = gauge;

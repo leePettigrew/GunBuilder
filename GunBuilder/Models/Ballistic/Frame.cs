@@ -1,5 +1,5 @@
 ﻿// GunBuilder.Models.Frame.cs
-namespace GunBuilder.Models
+namespace GunBuilder.Models.Ballistic
 {
     public class Frame
     {

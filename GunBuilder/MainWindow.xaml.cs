@@ -7,10 +7,10 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using GunBuilder.Models;
+using GunBuilder.Models.Ballistic;
 
 // Alias 'WeaponFrame' to refer to 'GunBuilder.Models.Frame' to resolve ambiguity
-using WeaponFrame = GunBuilder.Models.Frame;
+using WeaponFrame = GunBuilder.Models.Ballistic.Frame;
 
 namespace GunBuilder
 {
@@ -40,7 +40,8 @@ namespace GunBuilder
         public MainWindow()
         {
             InitializeComponent();             // Initializes all UI components
-            LoadWeaponComponents();           // Loads data into component lists
+            LoadWeaponComponents();           // Loads ballistic data
+            LoadArcheryComponents();          // Loads archery data
 
             // Temporarily unsubscribe event handlers to prevent unwanted triggers during initialization
             WeaponTypeComboBox.SelectionChanged -= WeaponTypeComboBox_SelectionChanged;
@@ -54,6 +55,11 @@ namespace GunBuilder
             AttachmentsListBox.SelectionChanged -= AttachmentsListBox_SelectionChanged;
             StockComboBox.SelectionChanged -= StockComboBox_SelectionChanged;
             BarrelLengthTextBox.TextChanged -= BarrelLengthTextBox_TextChanged;
+
+            // Archery Event Handlers
+            BowComboBox.SelectionChanged -= BowComboBox_SelectionChanged;
+            MaterialComboBox.SelectionChanged -= MaterialComboBox_SelectionChanged;
+            ArrowComboBox.SelectionChanged -= ArrowComboBox_SelectionChanged;
 
             InitializeDefaultSelections();    // Sets default selections which might trigger events
             UpdateAmmoVisibility();           // Adjusts ammo visibility based on default frame
@@ -70,6 +76,11 @@ namespace GunBuilder
             AttachmentsListBox.SelectionChanged += AttachmentsListBox_SelectionChanged;
             StockComboBox.SelectionChanged += StockComboBox_SelectionChanged;
             BarrelLengthTextBox.TextChanged += BarrelLengthTextBox_TextChanged;
+
+            // Archery Event Handlers
+            BowComboBox.SelectionChanged += BowComboBox_SelectionChanged;
+            MaterialComboBox.SelectionChanged += MaterialComboBox_SelectionChanged;
+            ArrowComboBox.SelectionChanged += ArrowComboBox_SelectionChanged;
 
             isInitialized = true;
         }
@@ -1083,6 +1094,12 @@ namespace GunBuilder
                     // Halve and round up the total damage
                     totalDamageMod = (int)Math.Ceiling(totalDamageMod / 2.0);
                     debugInfo.AppendLine($"Total Damage Modifier after Halving and Rounding Up: {totalDamageMod}");
+                    // Check if there's an extra dice modifier for the selected ammo
+                    if (SelectedShotgunShell != null && SelectedShotgunShell.ExtraDice > 0)
+                    {
+                        totalDamageMod += SelectedShotgunShell.ExtraDice; // Add extra dice modifier
+                        debugInfo.AppendLine($"Extra Dice Modifier for {SelectedShotgunShell.Name}: {SelectedShotgunShell.ExtraDice}");
+                    }
                 }
                 else
                 {
