@@ -215,6 +215,8 @@
                                                 <ListBoxItem Content=".338 Magnum"/>
                                                 <ListBoxItem Content="4.73x33mm Caseless"/>
                                                 <ListBoxItem Content="14.5x114mm"/>
+												<ListBoxItem Content="Musket Ball"/>
+												<ListBoxItem Content=".303"/>
                                             </ListBox>
                                         </Grid>
 

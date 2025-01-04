@@ -174,7 +174,9 @@ namespace GunBuilder
                 new Ammo(".338 Magnum", "Rifle", 125, 3.5, 12, 0, 0, 0,0.567, "High-performance hunting rounds."),
                 new Ammo("4.73x33mm Caseless", "Rifle", 160, 4.5, 8, 0, 0, 0,0.281, "Advanced caseless technology."),
                 new Ammo("14.5x114mm", "Rifle", 300, 6.0, 8, 2, 0, 0,1.0, "Heavy anti-materiel rounds."),
-                new Ammo("Musket Balls", "Rifle", 50, 1.5, 6, 0, 0, 0, 0.330, "Homemade ammunition ")
+                new Ammo("Musket Balls", "Rifle", 50, 1.5, 6, 0, 0, 0, 0.330, "Homemade ammunition "),
+                new Ammo(".303", "Rifle", 50, 1.5, 12, 0, 0, 0, 0.499, "British init "),
+                
             };
         }
 
